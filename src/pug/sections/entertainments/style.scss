@@ -1,0 +1,80 @@
+.entertainments {
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @include mq($l) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include mq($m) {
+      position: static;
+    }
+
+    &-main {
+      background-color: var(--color-blck-25);
+      border-radius: 48px;
+      overflow: hidden;
+
+      @include mq($m) {
+        position: relative;
+        border-radius: 36px;
+      }
+    }
+
+    &-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1/1;
+
+      img {
+        display: block;
+        width: 100%;
+
+      }
+    }
+
+    &-title {
+      width: 100%;
+      padding: 36px 128px 36px 36px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-family: var(--font-secondary);
+      font-size: 48px;
+      line-height: 1;
+      z-index: 1;
+
+      @include mq($xl) {
+        font-size: 36px;
+        line-height: 1.3;
+      }
+
+      @include mq($l) {
+        padding-bottom: 52px;
+      }
+
+      @include mq($m) {
+        position: static;
+        font-size: 30px;
+        line-height: 1.2;
+        padding: 0;
+        margin-top: 24px;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      z-index: 2;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+- 
+  var promos = [
+    {
+      img: '01',
+      title: 'Мы ждем именно тебя! Актуальные вакансии',
+      date: 'до 22.03.25'
+    },
+    {
+      img: '02',
+      title: 'Приключения вдвоем',
+      date: 'до 10.04.25'
+    },
+    {
+      img: '03',
+      title: 'Скидочные дни',
+      date: 'бессрочно'
+    },
+    {
+      img: '04',
+      title: 'Скидки компаниям от 4 человек',
+      date: 'до 14.03.25'
+    },
+    {
+      img: '01',
+      title: 'Мы ждем именно тебя! Актуальные вакансии',
+      date: 'до 22.03.25'
+    },
+    {
+      img: '02',
+      title: 'Приключения вдвоем',
+      date: 'до 10.04.25'
+    },
+  ]
+
+section.s-promo.section 
+  .container 
+    +section-heading('Акции парка', 'Все акции')
+    .s-promo__slider(data-slider="promo")
+      .swiper-wrapper 
+        for item in promos
+          .swiper-slide 
+            a(href="#").promo-card
+              picture.promo-card__img 
+                img(src=`./img/promo/promo-${item.img}.jpg`, alt="Клип")
+              .promo-card__info
+                .promo-card__date= item.date
+                .promo-card__title= item.title
+      .common-slider-scrollbar
+        .swiper-scrollbar(data-slider-scrollbar="promo")
+      .s-promo__bottom 
+        a(href="#").btn.btn_wide Все акции
+            

@@ -1,0 +1,54 @@
+- 
+  var parkZones = [
+    {
+      img: '01',
+      title: 'Веревочный парк',
+      stickers: ['6+', 'до 100 кг', 'от 100 см'],
+      desc: 'Высота 17 метров, уникальные маршруты и трассы различного уровня сложности удовлетворят запросы как начинающих...'
+    },
+    {
+      img: '02',
+      title: 'Спортивный скалодром',
+      stickers: ['6+', 'до 100 кг', 'от 100 см'],
+      desc: 'Высота 17 метров, уникальные маршруты и трассы различного уровня'
+    },
+    {
+      img: '03',
+      title: 'Виа Феррата',
+      stickers: ['6+', 'до 100 кг', 'от 100 см'],
+      desc: 'Высота 17 метров, уникальные маршруты и трассы различного уровня сложности удовлетворят запросы как начинающих...'
+    },
+    {
+      img: '04',
+      title: 'Активити зона',
+      stickers: ['6+', 'до 100 кг'],
+      desc: 'Высота 17 метров, уникальные маршруты и трассы различного уровня сложности удовлетворят запросы как начинающих...'
+    },
+  ]
+
+section.park-zones.section 
+  .container 
+    +section-heading('Развлекательные зоны парка', false)
+    .park-zones__slider(data-slider="cards")
+      .swiper-wrapper 
+        for item in parkZones
+          .swiper-slide
+            .park-zones-card 
+              .park-zones-card__main 
+                picture.park-zones-card__img 
+                  img(src=`./img/park-zones/img-${item.img}.jpg`, alt=`${item.title}`)
+                .park-zones-card__stickers 
+                  for sticker in item.stickers
+                    .park-zones-card__sticker= sticker
+              .park-zones-card__info 
+                .park-zones-card__title= item.title
+                .park-zones-card__desc= item.desc
+                .park-zones-card__action
+                  button.park-zones-card__btn.btn.btn_l
+                    span Купить билет
+                    +svg(28, 28, 'tickets')
+                  a(href="#").park-zones-card__link.btn-link
+                    +svg(24, 24, 'arrow-link')
+      .common-slider-scrollbar
+        .swiper-scrollbar(data-slider-scrollbar="cards")
+

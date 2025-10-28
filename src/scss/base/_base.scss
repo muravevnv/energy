@@ -1,0 +1,87 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white);
+  color: var(--color-blck);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 114px;
+
+  @include mq($xl) {
+    padding-top: 110px;
+  }
+
+  @include mq($l) {
+    padding-top: 90px;
+  }
+
+  @include mq($m) {
+    padding-top: 90px;
+  }
+}
+
+.container {
+  max-width: 1444px;
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+
+  @include mq($m) {
+    padding: 0 16px;
+  }
+}
+
+.section {
+  padding: 60px 0;
+
+  @include mq($xl) {
+    padding: 40px 0;
+  }
+
+  @include mq($l) {
+    padding: 36px 0;
+  }
+
+  @include mq($m) {
+    padding: 40px 0;
+  }
+}
+
+.section-top {
+  padding: 20px 0 40px;
+}
+
+.heading {
+  padding: 16px 0 48px;
+
+  @include mq($l) {
+    padding-bottom: 32px;
+  }
+}
+
+.loader {
+  width: 100%;
+  padding: 48px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq($l) {
+    padding: 36px 0;
+
+    svg {
+      display: block;
+      width: 36px;
+      height: 36px;
+    }
+  }
+}

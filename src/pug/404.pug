@@ -1,0 +1,16 @@
+include include/mixins
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Энергия высоты
+    link(rel="stylesheet", href="css/main.min.css")
+  body 
+    
+    include components/header/index
+    main 
+      include sections/not-found/index
+    include components/footer/index
+    include include/scripts

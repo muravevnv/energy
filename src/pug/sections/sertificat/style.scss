@@ -1,0 +1,115 @@
+.sertificat {
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 60px;
+    
+    @include mq($xl) {
+      flex-direction: column;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__title {
+    max-width: 540px;
+    width: 100%;
+    font-size: 36px;
+    line-height: 1.1;
+
+    @include mq($xl) {
+      max-width: 100%;
+    }
+
+    @include mq($l) {
+      font-size: 30px;
+      line-height: 1.2;
+    }
+    
+    span {
+      color: var(--color-accent-600)
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    @include mq($xxl) {
+      max-width: 540px;
+    }
+
+    @include mq($xl) {
+      max-width: 100%;
+    }
+
+    &-title {
+      font-size: 18px;
+      line-height: 1.56;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 200;
+      color: var(--color-grey-dark);
+
+      a {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__inner {
+    padding: 0 48px;
+
+    @include mq($xxl) {
+      padding: 0;
+    }
+  }
+
+  &__main {
+    position: relative;
+  }
+
+  &__ticket {
+    display: block;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 18%;
+    bottom: 15%;
+
+    @include mq($xxl) {
+      bottom: 13%;
+      right: 15%;
+    }
+
+    @include mq($xl) {
+      bottom: 40px;
+      right: 13%;
+    }
+
+    @include mq($l) {
+      display: flex;
+      position: static;
+      max-width: max-content;
+      margin: 36px auto 0;
+    }
+
+    @include mq($s) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+section.section.sertiifcat 
+  .container 
+    .sertificat__head 
+      h2.sertificat__title
+        span  Подарочный сертификат 
+        | на&nbsp;посещение парка
+      .sertificat__desc
+        .sertificat__desc-title Самое ценное — это впечатления! Подари близким эмоции, которые останутся надолго!
+        .sertificat__desc-text Внешний вид сертификата может отличаться. При покупке на сайте, вы приобретаете стандартный электронный билет. Красивый сертификат можно купить только в парке или заказать доставку по телефону 
+          a(href="#") +7 (812) 335-65-55
+    .sertificat__inner
+      .sertificat__main 
+        picture.sertificat__ticket 
+          source(srcset="./img/ticket/ticket-sm.svg", media="(max-width: 560px)")
+          img(src="./img/ticket/ticket.svg", alt="")
+        a(href="#").sertificat__btn.btn.btn_l
+          span Купить сертификат
+          +svg(28, 28, 'tickets')

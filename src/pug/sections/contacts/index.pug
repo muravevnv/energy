@@ -1,0 +1,64 @@
+section.contacts.section-top 
+  .container 
+    .heading 
+      h1.h1 Контакты
+    .contacts__inner
+      .contact-us
+        .contact-us__inner 
+          .contact-us__title Свяжитесь с нами
+          .contact-us__info 
+            a(href="#").contact-us__item
+              +svg(32, 32, 'email') 
+              span info@3356555.ru
+            a(href="#").contact-us__item
+              +svg(32, 32, 'tel') 
+              span +7 (812) 335-65-55
+            a(href="#").contact-us__item
+              +svg(32, 32, 'address') 
+              span СПб, ул. Софийская, 14
+            .contact-us__schedule 
+              .contact-us__schedule-item 
+                .contact-us__schedule-item-time 10:00-22:00
+                .contact-us__schedule-item-zone Веревочный парк
+              .contact-us__schedule-item 
+                .contact-us__schedule-item-time 10:00-23:00
+                .contact-us__schedule-item-zone Скалодром
+          .contact-us__socials 
+            a(href="#").contact-us__social.btn.btn_m.btn_white 
+              +svg(20, 20, "tg")
+              span @HighEnergy_bot
+            a(href="#").contact-us__social.btn.btn_m.btn_white 
+              +svg(20, 20, "vk")
+              span vk.com/highenergyspb
+      .how-to-get 
+        .how-to-get__info 
+          .how-to-get__title Как до нас доехать?
+          .how-to-get__details 
+            .how-to-get__block
+              .how-to-get__block-title 
+                +svg(32,32,'metro') 
+                span
+                  +svg(32,32,'station') 
+                  span Международная
+              .how-to-get__block-desc 2 остановки
+              .how-to-get__block-bus 
+                .how-to-get__block-bus-line
+                  .how-to-get__block-bus-line-label Автобусы: 
+                  .how-to-get__block-bus-line-nums
+                    .how-to-get__block-bus-line-num 12
+                    .how-to-get__block-bus-line-num 31
+                    .how-to-get__block-bus-line-num 91
+                    .how-to-get__block-bus-line-num 95
+                .how-to-get__block-bus-line
+                  .how-to-get__block-bus-line-label Троллейбус:
+                  .how-to-get__block-bus-line-nums
+                    .how-to-get__block-bus-line-num 35
+              .how-to-get__block-desc Пешком ~ 20 минут
+            .how-to-get__block
+              .how-to-get__block-title 
+                +svg(32,32,'address-color') 
+                span ж/д ст. Фарфоровская
+              .how-to-get__block-desc Пешком ~ 15 минут
+        .how-to-get__map 
+          div(class="map" id="map")
+            img(src="./img/contacts/map.jpg", alt="")

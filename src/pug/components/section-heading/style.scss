@@ -1,0 +1,17 @@
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0 48px; 
+
+  @include mq($m)  {
+    padding-bottom: 32px;
+  }
+}
+
+.section-heading-btn {
+
+  @include mq($m) {
+    display: none;
+  }
+}

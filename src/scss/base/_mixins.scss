@@ -1,0 +1,16 @@
+// == media queries
+@mixin mq($canvas, $canvas2: null) {
+  @if $canvas {
+    @media only screen and (max-width: $canvas) {
+      @content;
+    }
+  }
+}
+
+@mixin mq-hover() {
+  &:hover {
+    @media (hover: hover) {
+      @content;
+    }
+  }
+}

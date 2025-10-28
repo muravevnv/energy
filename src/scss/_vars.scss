@@ -1,0 +1,73 @@
+/* BREAKPOINTS
+------------------------- */
+$xs: 374.98px;
+$s: 559.98px;
+$m: 767.98px;
+$l: 991.98px;
+$xl: 1199.98px;
+$xxl: 1439.98px;
+
+:root {
+
+  --color-white: #FFFFFF;
+  --color-accent-900: #301800;
+  --color-accent-800: #6A3601;
+  --color-accent-700: #A05100;
+  --color-accent-600: #D16900;
+  --color-accent-500: #F08518;
+  --color-accent-400: #F2983E;
+  --color-accent-300: #F5B069;
+  --color-accent-200: #F8C896;
+  --color-accent-100: #FBDFC2;
+  --color-accent-50: #FBDFC2;
+  --color-accent-25: #FBF2EA;
+
+  --color-secondary-900: #392400;
+  --color-secondary-800: #734801;
+  --color-secondary-700: #BB7600;
+  --color-secondary-600: #DF8F05;
+  --color-secondary-500: #F59F0D;
+  --color-secondary-400: #F7AE34;
+  --color-secondary-300: #F8BF5F;
+  --color-secondary-200: #FAD18A;
+  --color-secondary-100: #FCE3BA;
+  --color-secondary-50: #FBEEDA;
+  --color-secondary-25: #FBF4E7;
+
+  --color-blck-900: #0D0D0D;
+  --color-blck-800: #222222;
+  --color-blck-700: #2B2A29;
+  --color-blck-600: #383838;
+  --color-blck-500: #434242;
+  --color-blck-400: #707070;
+  --color-blck-300: #9D9E9E;
+  --color-blck-200: #BFBFBF;
+  --color-blck-100: #D9D9D9;
+  --color-blck-50: #EAEAEA;
+  --color-blck-25: #F4F4F4;
+
+  --color-accent: var(--color-accent-500);
+  --color-secondary: var(--color-secondary-500);
+  --color-blck: var(--color-blck-900);
+  --color-grey: var(--color-blck-400);
+  --color-grey-dark: var(--color-blck-500);
+  --color-grey-light: var(--color-blck-25);
+  --color-bg-main: #FEFEFE;
+
+  --rounded-2xs: 4px;
+  --rounded-xs: 8px;
+  --rounded-xl: 24px;
+  --rounded-3xl: 36px;
+  --rounded-5xl: 48px;
+  --rounded-6xl: 60px;
+
+  
+  --font-primary: 'Geologica', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-secondary: 'ProstoOne', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-size-default: 16px;
+  --line-height-default: 1.5;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница развлечения</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body> 
+    <header class="header"> 
+      <div class="container"> 
+        <div class="header__inner"> 
+          <button class="header__burger" type="button" data-menu-btn="menu"><span> </span><span> </span><span> </span></button><a class="header__logo" href="#"><img src="./img/logo-letters.svg" alt="Энергия высоты"></a>
+          <div class="header__menu menu" data-menu="menu">
+            <div class="menu__inner">
+              <div class="menu__content">
+                <nav class="menu__nav"> 
+                  <ul class="menu__nav-list"> 
+                    <li class="menu__nav-item"> <a href="#">Главная </a></li>
+                    <li class="menu__nav-item menu-dropdown" data-menu-dropdown="item"> <a class="menu-dropdown__item" href="#" data-menu-dropdown="btn"><span>Все развлечения</span>
+                        <svg width="10" height="10"> 
+                          <use xlink:href="./img/sprite.svg#chevron-down"></use>
+                        </svg></a>
+                      <ul class="menu-dropdown__list" data-menu-dropdown="list">
+                        <li class="menu-dropdown__list-item"> <a href="#">Веревочный парк</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Спортивный скалодром</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Виа Феррата</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Активити зона</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Троллей</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Сеточный лабиринт</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Прыжок с крыла самолета</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Праздники для взрослых</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Секции</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Спортшкола</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Кафе</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu__nav-item"> <a href="#">Цены</a></li>
+                    <li class="menu__nav-item"> <a href="#">Расписание</a></li>
+                    <li class="menu__nav-item"> <a href="#">Акции</a></li>
+                    <li class="menu__nav-item"> <a href="#">Новости</a></li>
+                    <li class="menu__nav-item menu-dropdown" data-menu-dropdown="item"> <a class="menu-dropdown__item" href="#" data-menu-dropdown="btn"><span>О нас</span>
+                        <svg width="10" height="10"> 
+                          <use xlink:href="./img/sprite.svg#chevron-down"></use>
+                        </svg></a>
+                      <ul class="menu-dropdown__list" data-menu-dropdown="list">
+                        <li class="menu-dropdown__list-item"> <a href="#">О комплексе</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Отзывы</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Фотогалерея</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Галерея роликов</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="menu__contacts"><a class="menu__tel" href="tel:+78123356555">+7 (812) 335-65-55</a></div>
+                <div class="menu__bottom">
+                  <div class="menu__action"><a class="menu__soc-link btn btn_white btn_m btn_wide" href="#"> 
+                      <svg width="20" height="20"> 
+                        <use xlink:href="./img/sprite.svg#tg"></use>
+                      </svg><span>@HighEnergy_bot</span></a><a class="menu__soc-link btn btn_white btn_m btn_wide" href="#"> 
+                      <svg width="20" height="20"> 
+                        <use xlink:href="./img/sprite.svg#vk"></use>
+                      </svg><span>vk.com/highenergyspb</span></a><a class="menu__btn btn btn_wide" href="#"><span>Купить билет</span>
+                      <svg width="24" height="24"> 
+                        <use xlink:href="./img/sprite.svg#tickets"></use>
+                      </svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__toolbar"> <a class="header__tel" href="tel:+78123356555">+7 (812) 335-65-55</a>
+            <div class="header__actions">
+              <div class="header__socials">
+                <div class="socials"> <a class="socials__item" href="#"> 
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#tg"></use>
+                    </svg></a><a class="socials__item" href="#"> 
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#vk"></use>
+                    </svg></a></div>
+              </div>
+              <button class="header__btn btn btn"> <span>Купить билет</span>
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#tickets"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main> 
+      <section class="breadcrumbs"> 
+        <div class="container">
+          <ul class="breadcrumbs__list"> 
+            <li class="breadcrumbs__item"> <a href="#">Главная</a></li>
+            <li class="breadcrumbs__item"> <a href="#">Все развлечения</a></li>
+            <li class="breadcrumbs__item"> <a href="#">Страница развлечения</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="service section-top"> 
+        <div class="service__bg"> <img src="./img/decor/mountains.svg" alt=""></div>
+        <div class="container"> 
+          <div class="service__wrapper">
+            <div class="service__hero"> 
+              <picture class="service__hero-img"> <img src="./img/service/main.png" alt="Страница развлечения/услуги"></picture>
+              <div class="service__hero-info"> 
+                <h1 class="service__hero-title h1">Страница развлечения/услуги</h1>
+                <div class="service__hero-panel"> 
+                  <button class="service__hero-btn btn btn_l"> <span>Купить билет</span>
+                    <svg width="28" height="28"> 
+                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                    </svg>
+                  </button>
+                  <div class="service__hero-details"> 
+                    <div class="service__hero-detail"> 
+                      <div class="service__hero-detail-value">4+</div>
+                      <div class="service__hero-detail-label">Возраст</div>
+                    </div>
+                    <div class="service__hero-detail"> 
+                      <div class="service__hero-detail-value">от 120</div>
+                      <div class="service__hero-detail-label">Рост (см)</div>
+                    </div>
+                    <div class="service__hero-detail"> 
+                      <div class="service__hero-detail-value">от 10</div>
+                      <div class="service__hero-detail-label">человек</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="service__inner">
+              <div class="service__content">
+                <div class="sv-block"> 
+                  <div class="sv-block__content"> 
+                    <div class="sv-desc"> 
+                      <p> <b>Самый масштабный в России крытый веревочный парк* <br>(*является крупнейшим по протяженности трасс крытым веревочным парком в РФ по данным Книги Рекордов России).</b></p>
+                    </div>
+                    <div class="sv-tags"> 
+                      <div class="sv-tags__item">Уникальный дизайн трасс и заданий</div>
+                      <div class="sv-tags__item">Непрерывная система страховки</div>
+                      <div class="sv-tags__item">Высокий уровень безопасности</div>
+                    </div>
+                    <div class="sv-desc"> 
+                      <p>Самый масштабный в России крытый веревочный парк* (*является крупнейшим по протяженности трасс крытым веревочным парком в РФ по данным Книги Рекордов России). Самый масштабный в России крытый веревочный парк* (*является крупнейшим по протяженности трасс крытым веревочным парком в РФ по данным Книги Рекордов России).</p>
+                    </div>
+                    <picture class="sv-img"> <img src="./img/service/img-00.png" alt="Фото 1"></picture>
+                  </div>
+                </div>
+                <div class="sv-block"> 
+                  <div class="sv-block__title">Преимущества</div>
+                  <div class="sv-block__content"> 
+                    <div class="sv-advantages"> 
+                      <div class="sv-advantages__item"> 
+                        <picture class="sv-advantages__item-img"> <img src="./img/service/adv-01.png" alt="Яркая программа"></picture>
+                        <div class="sv-advantages__item-info"> 
+                          <div class="sv-advantages__item-title">Яркая программа с ведущим</div>
+                          <div class="sv-advantages__item-desc">Выберете программу для себя: приключения в веревочном парке или спортивные соревнования на скалодроме</div>
+                        </div>
+                      </div>
+                      <div class="sv-advantages__item"> 
+                        <picture class="sv-advantages__item-img"> <img src="./img/service/adv-01.png" alt="Яркая программа"></picture>
+                        <div class="sv-advantages__item-info"> 
+                          <div class="sv-advantages__item-title">Праздничное меню</div>
+                          <div class="sv-advantages__item-desc">Закажите угощения в кафе комплекса или принесите с собой</div><a class="sv-advantages__item-btn btn btn_s" href="#">Посмотреть меню</a>
+                        </div>
+                      </div>
+                      <div class="sv-advantages__item"> 
+                        <picture class="sv-advantages__item-img"> <img src="./img/service/adv-01.png" alt="Яркая программа"></picture>
+                        <div class="sv-advantages__item-info"> 
+                          <div class="sv-advantages__item-title">Кают-компании</div>
+                          <div class="sv-advantages__item-desc">Уютные банкетные комнаты для сбора гостей и чаепития</div>
+                        </div>
+                      </div>
+                      <div class="sv-advantages__item"> 
+                        <picture class="sv-advantages__item-img"> <img src="./img/service/adv-01.png" alt="Яркая программа"></picture>
+                        <div class="sv-advantages__item-info"> 
+                          <div class="sv-advantages__item-title">Персональный менеджер</div>
+                          <div class="sv-advantages__item-desc">Поможет подобрать подходящий пакет и организовать праздник</div>
+                        </div>
+                      </div>
+                      <div class="sv-advantages__item"> 
+                        <picture class="sv-advantages__item-img"> <img src="./img/service/adv-01.png" alt="Яркая программа"></picture>
+                        <div class="sv-advantages__item-info"> 
+                          <div class="sv-advantages__item-title">Праздничная атмосфера</div>
+                          <div class="sv-advantages__item-desc">Закажите праздничное оформление комнаты и услуги фотографа</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sv-block"> 
+                  <div class="sv-block__title">Пакеты и цены</div>
+                  <div class="sv-block__content"> 
+                    <div class="sv-pricelist"> 
+                      <div class="sv-pricelist__main">
+                        <div class="sv-pricelist__info"> 
+                          <div class="sv-pricelist__title">«Все приключения»</div>
+                          <div class="sv-pricelist__desc"> 
+                            <ul> 
+                              <li>Анимация: <span>1 час</span></li>
+                              <li>Все приключения: <span>2 часа</span></li>
+                              <li>Кают-компания: <span>4 часа</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="sv-pricelist__variants">
+                          <div class="sv-pricelist__variant">
+                            <div class="sv-pricelist__variant-title">1-5 гостей</div>
+                            <div class="sv-pricelist__variant-list"> 
+                              <div class="sv-pricelist__variant-price">21 800 ₽<span>будни</span></div>
+                              <div class="sv-pricelist__variant-price">24 800 ₽<span>выходные</span></div>
+                            </div>
+                          </div>
+                          <div class="sv-pricelist__variant">
+                            <div class="sv-pricelist__variant-title">6-10 гостей</div>
+                            <div class="sv-pricelist__variant-list"> 
+                              <div class="sv-pricelist__variant-price">27 800 ₽<span>будни</span></div>
+                              <div class="sv-pricelist__variant-price">32 800 ₽<span>выходные</span></div>
+                            </div>
+                          </div>
+                          <div class="sv-pricelist__variant">
+                            <div class="sv-pricelist__variant-title">11-15 гостей</div>
+                            <div class="sv-pricelist__variant-list"> 
+                              <div class="sv-pricelist__variant-price">40 800 ₽<span>будни</span></div>
+                              <div class="sv-pricelist__variant-price">46 800 ₽<span>выходные</span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><a class="sv-pricelist__btn btn btn_wide" href="#">Выбрать пакет</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="sv-block"> 
+                  <div class="sv-block__title">Возрастные ограничения <span>4+</span></div>
+                  <div class="sv-block__content"> 
+                    <div class="sv-desc"> 
+                      <p>Посетители до <span>14 лет </span>допускаются к прохождению трасс только в присутствии сопровождающего лица (сопровождение не требует доплаты).</p>
+                      <p>Посетители с 14 до 18 лет допускаются к посещению парка при предоставлении заполненной расписки от законного представителя.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sv-block"> 
+                  <div class="sv-block__title">Ограничения по росту</div>
+                  <div class="sv-block__content"> 
+                    <div class="sv-text">1-й уровнь — до 140 см (рекомендуемый возраст — от 4-х лет)<br>2-3 уровни — от 120 см (рекомендуемый возраст — от 7 лет)<br>4-й уровень — от 140 см (рекомендуемый возраст — от 10 лет)<br>5-й уровень — от 150 см (рекомендуемый возраст — от 10 лет)</div>
+                  </div>
+                </div>
+                <div class="sv-block"> 
+                  <div class="sv-block__title">Ограничения по весу</div>
+                  <div class="sv-block__content"> 
+                    <div class="sv-text">Максимально допустимый вес для посещения парка — <b>100 кг</b></div>
+                  </div>
+                </div>
+                <div class="sv-block"> 
+                  <div class="sv-block__title">Правила посещения</div>
+                  <div class="sv-block__content"> 
+                    <div class="sv-documents"> <a class="sv-documents__item" href="#"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#document"></use>
+                        </svg><span>Правила посещения комплекса</span></a><a class="sv-documents__item" href="#"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#document"></use>
+                        </svg><span>Техника безопасности QuickJump</span></a><a class="sv-documents__item" href="#"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#document"></use>
+                        </svg><span>Техника безопасности Троллей</span></a><a class="sv-documents__item" href="#"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#document"></use>
+                        </svg><span>Техника безопасности в веревочном парке</span></a></div>
+                  </div>
+                </div>
+                <div class="sv-block"> 
+                  <div class="sv-block__title">Скидки</div>
+                  <div class="sv-block__content"> 
+                    <div class="sv-discount"> 
+                      <div class="sv-discount__list"> 
+                        <div class="sv-discount__item"> 
+                          <div class="sv-discount__item-sticker">20%</div>
+                          <div class="sv-discount__item-desc">Многодетным</div>
+                        </div>
+                        <div class="sv-discount__item"> 
+                          <div class="sv-discount__item-sticker">50%</div>
+                          <div class="sv-discount__item-desc">Именинникам<span>*Действует в день рождения +/- 1 день. Не действует на пакетные предложения празднования дня рождения и выпускного, а также на аренду комнат для чаепития.</span></div>
+                        </div>
+                        <div class="sv-discount__item"> 
+                          <div class="sv-discount__item-sticker">20%</div>
+                          <div class="sv-discount__item-desc">Студентам</div>
+                        </div>
+                        <div class="sv-discount__item"> 
+                          <div class="sv-discount__item-sticker">10%</div>
+                          <div class="sv-discount__item-desc">Единая карта Петербуржца</div>
+                        </div>
+                        <div class="sv-discount__item"> 
+                          <div class="sv-discount__item-sticker">10%</div>
+                          <div class="sv-discount__item-desc">от 15 человек при единовременной оплате</div>
+                        </div>
+                        <div class="sv-discount__item"> 
+                          <div class="sv-discount__item-sticker">15%</div>
+                          <div class="sv-discount__item-desc">от 25 человек при единовременной оплате </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sv-desc"> 
+                      <ul> 
+                        <li>Скидки предоставляются только на билеты в верёвочный парк. </li>
+                        <li>Скидки не распространяются на покупку сертификатов, абонементов, праздничных пакетов и не суммируются с другими акциями и скидками. </li>
+                        <li>Скидки не распространяются на покупку билетов на сайте. </li>
+                        <li>Скидки действительны только для физических лиц. В случае приобретения акционного/льготного билета Посетитель обязан предъявить документ, подтверждающий право на льготу или получение скидки, в противном случае администрация СРК вправе отказать в предоставлении льготы или скидки.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="sv-block"> 
+                  <div class="sv-block__content"> 
+                    <div class="sv-attention"> 
+                      <h2>Обратите внимание!</h2>
+                      <ul> 
+                        <li>Для активного отдыха в верёвочном парке рекомендуем взять с собой удобную спортивную одежду и обувь. Также вы можете взять в аренду кеды, обратившись на стойку ресепшен</li>
+                        <li>Сопровождающим тоже необходимо иметь сменную обувь, в случае ее отсутствия можно воспользоваться бахилами</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="service__sidebar">
+                <div class="service__mascot"> <img src="./img/decor/rokki.svg" alt=""></div>
+                <div class="service__gallery">
+                  <div class="service__gallery-title h3">Фотогалерея</div>
+                  <div class="service__gallery-photos"> 
+                    <div class="service__gallery-stack">
+                      <picture class="service__gallery-photo"> <img src="./img/service/side-01.png" alt="Фото 1"></picture>
+                      <picture class="service__gallery-photo"> <img src="./img/service/side-02.png" alt="Фото 2"></picture>
+                      <picture class="service__gallery-photo"> <img src="./img/service/side-03.png" alt="Фото 3"></picture>
+                      <picture class="service__gallery-photo"> <img src="./img/service/side-04.png" alt="Фото 4"></picture>
+                      <picture class="service__gallery-photo"> <img src="./img/service/side-05.png" alt="Фото 5"></picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="service__banner"> 
+                  <div class="service__banner-mascot"> <img src="./img/decor/rokki.svg" alt=""></div>
+                  <div class="service__banner-title h3">Вы готовы к приключениям?</div>
+                  <div class="service__banner-desc">Приобретайте билеты для взрослых и детей или сделайте классный подарок в виде сертификата на посещение</div>
+                  <div class="service__banner-price"> 
+                    <div class="service__banner-price-title">Стоимость посещения:</div>
+                    <div class="service__banner-price-summ">от 99 999 руб.</div>
+                  </div>
+                  <div class="service__banner-actions"> 
+                    <button class="btn btn_l btn_wide" type="button"><span>Купить билет</span>
+                      <svg width="28" height="28"> 
+                        <use xlink:href="./img/sprite.svg#tickets"></use>
+                      </svg>
+                    </button><a class="btn btn_l btn_wide btn_outline" href="#">Подарочный сертификат</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer__inner"> <a class="footer__logo" href="#"><img src="./img/logo.svg" alt="Энергия высоты"></a>
+          <div class="footer__main">
+            <nav class="footer__nav">
+              <div class="footer__nav-title">О комплексе</div>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"> <a href="#">Новости</a></li>
+                <li class="footer__nav-item"> <a href="#">Блог</a></li>
+                <li class="footer__nav-item"> <a href="#">Цены</a></li>
+                <li class="footer__nav-item"> <a href="#">Акции</a></li>
+                <li class="footer__nav-item"> <a href="#">Отзывы</a></li>
+                <li class="footer__nav-item"> <a href="#">Спортшкола</a></li>
+                <li class="footer__nav-item"> <a href="#">Расписание занятий</a></li>
+                <li class="footer__nav-item"> <a href="#">Часто задаваемые вопросы</a></li>
+                <li class="footer__nav-item"> <a href="#">Контакты</a></li>
+                <li class="footer__nav-item"> <a href="#">Правовая информация</a></li>
+              </ul>
+            </nav>
+            <nav class="footer__nav">
+              <div class="footer__nav-title">Развлечения</div>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"> <a href="#">Веревочный парк</a></li>
+                <li class="footer__nav-item"> <a href="#">Спортивный скалодром </a></li>
+                <li class="footer__nav-item"> <a href="#">Виа Феррата </a></li>
+                <li class="footer__nav-item"> <a href="#">Сеточный лабиринт</a></li>
+                <li class="footer__nav-item"> <a href="#">Троллей </a></li>
+                <li class="footer__nav-item"> <a href="#">Прыжок с крыла самолета </a></li>
+                <li class="footer__nav-item"> <a href="#">Для активного </a></li>
+              </ul>
+            </nav>
+            <nav class="footer__nav">
+              <div class="footer__nav-title">Услуги</div>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"> <a href="#">Кафе</a></li>
+                <li class="footer__nav-item"> <a href="#">Детские праздники</a></li>
+                <li class="footer__nav-item"> <a href="#">Праздники для взрослых </a></li>
+                <li class="footer__nav-item"> <a href="#">Корпоративы </a></li>
+                <li class="footer__nav-item"> <a href="#">Секции </a></li>
+                <li class="footer__nav-item"> <a href="#">Организаторам туров</a></li>
+                <li class="footer__nav-item"> <a href="#">Франшиза</a></li>
+                <li class="footer__nav-item"> <a href="#">Для активного </a></li>
+              </ul>
+            </nav>
+            <div class="footer__contacts"><a class="footer__contacts-tel" href="#"> 
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#tel"></use>
+                </svg><span>+7 (812) 335-65-55</span></a>
+              <div class="footer__contacts-info"> 
+                <div class="footer__contacts-address"> 
+                  <svg width="24" height="24"> 
+                    <use xlink:href="./img/sprite.svg#address"></use>
+                  </svg><span>СПб, ул. Софийская, 14</span>
+                </div>
+                <div class="footer__contacts-schedule"> 
+                  <div class="footer__contacts-schedule-item">10:00-22:00<span>Веревочный парк</span></div>
+                  <div class="footer__contacts-schedule-item">10:00-23:00<span>Скалодром</span></div>
+                </div>
+              </div>
+              <div class="footer__contacts-socials">
+                <div class="socials"> <a class="socials__item socials__item_l socials__item_grey" href="#">
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#vk"></use>
+                    </svg></a><a class="socials__item socials__item_l socials__item_grey" href="#">
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#tg"></use>
+                    </svg></a></div>
+              </div><a class="footer__contacts-btn btn btn_wide" href="#"><span>Купить билет</span>
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#tickets"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="footer__bottom"><a class="footer__policy" href="#">Политика обработки персональных данных</a>
+            <div class="footer__copy"> © 2022. Все права защищены </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

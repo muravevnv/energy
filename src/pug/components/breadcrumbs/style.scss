@@ -1,0 +1,68 @@
+.breadcrumbs {
+  padding: 24px 0;
+
+  @include mq($m) {
+    padding: 16px 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: var(--color-blck);
+
+    >a {
+      @include mq-hover {
+        color: var(--color-accent-600);
+      }
+    }
+
+    &:last-child {
+      color: var(--color-blck-400);
+      pointer-events: none;
+    }
+
+    &:first-child {
+
+      @include mq($l) {
+
+        display: inline-flex;
+        align-items: center;
+        gap: 24px;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: url('../img/icons/arrow-back.svg') center center / contain no-repeat;
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+
+      @include mq($l) {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: var(--color-secondary-500);
+        border-radius: 50%;
+      }
+    }
+  }
+}

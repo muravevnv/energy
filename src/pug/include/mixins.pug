@@ -1,0 +1,17 @@
+mixin svg(width, height, icon)
+  svg(width=width height=height) 
+    use(xlink:href=`./img/sprite.svg#${icon}`)
+
+mixin section-heading(title, btn)
+  .section-heading 
+    h2.section-heading-title.h1= title 
+    if btn
+      a(href="#").section-heading-btn.btn= btn
+
+mixin breadcrumbs(items)
+  section.breadcrumbs 
+    .container
+      ul.breadcrumbs__list 
+        for item in items
+          li.breadcrumbs__item 
+            a(href="#")= item

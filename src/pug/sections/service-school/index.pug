@@ -1,0 +1,216 @@
+section.service.section-top 
+  .service__bg  
+    img(src="./img/decor/mountains.svg", alt="")
+  .container 
+    .service__wrapper
+      .service__hero 
+        picture.service__hero-img 
+          img(src="./img/service/service-10.png", alt="Спортивная школа скалолазания")
+        .service__hero-info 
+          h1.service__hero-title.h1 Спортивная школа скалолазания
+          .service__hero-panel 
+            button.service__hero-btn.btn.btn_l 
+              span Записаться!
+            .service__hero-details 
+              .service__hero-detail 
+                .service__hero-detail-value от 4 лет
+                .service__hero-detail-label Возраст
+              .service__hero-detail 
+                .service__hero-detail-value 17
+                .service__hero-detail-label метров
+              .service__hero-detail 
+                .service__hero-detail-value 120
+                .service__hero-detail-label трасс
+      .service__inner
+        .service__content
+          .sv-block 
+            .sv-block__content 
+              .sv-desc Мы готовим спортсменов побеждать и брать любые высоты, не забывая о безопасности и с большим вниманием к здоровью будущих чемпионов. 
+              .sv-tags  
+                .sv-tags__item 2-х часовые тренировки
+                .sv-tags__item Профессиональные тренеры
+                .sv-tags__item Небольшие группы до 15 человек
+                .sv-tags__item Карта клиента в подарок
+                .sv-tags__item Комфортные раздевалки с сауной
+                .sv-tags__item Кафе и зона отдыха
+          .sv-block 
+            .sv-block__title О школе скалолазания Энергии Высоты
+            .sv-block__content
+              .sv-video 
+                .videoplayer
+                  video(src="" poster="./img/about/preview.png").videoplayer__frame
+                  button(type="button").videoplayer__btn.btn-play
+                    +svg(36, 36, 'play-arrow')
+              .sv-desc 
+                ul 
+                  li Гимнастика и стретчинг для скалолазов
+                  li Боулдер зал на 150 трасс;
+                  li Трудность с нависанием, высота 17 метров, 120 трасс;
+                  li Эталонная скорость с автоматическими страховками и уникальной системой "Умный эталон";
+          .sv-block 
+            .sv-block__content 
+              .sv-advantages 
+                .sv-advantages__item 
+                  picture.sv-advantages__item-img 
+                    img(src="./img/service/adv-01.png", alt="Яркая программа")
+                  .sv-advantages__item-info 
+                    .sv-advantages__item-title Регулярно обновляющиеся трассы
+                .sv-advantages__item 
+                  picture.sv-advantages__item-img 
+                    img(src="./img/service/adv-01.png", alt="Яркая программа")
+                  .sv-advantages__item-info 
+                    .sv-advantages__item-title Квалифицированные тренеры и инструкторы
+                .sv-advantages__item 
+                  picture.sv-advantages__item-img 
+                    img(src="./img/service/adv-01.png", alt="Яркая программа")
+                  .sv-advantages__item-info 
+                    .sv-advantages__item-title Автостраховки для тренировок без напарника
+                .sv-advantages__item 
+                  picture.sv-advantages__item-img 
+                    img(src="./img/service/adv-01.png", alt="Яркая программа")
+                  .sv-advantages__item-info 
+                    .sv-advantages__item-title Для взрослых и детей от 4х лет
+          .sv-block 
+            .sv-block__title Возрастные группы
+            .sv-block__content 
+              .sv-desc 
+                ul 
+                  li 4-5 лет
+                  li 6-7 лет
+                  li 8-9 лет
+                  li Взрослая группа
+          .sv-block 
+            .sv-block__title Тренировки сегодня
+            .sv-block__content 
+              .sv-schedule
+                .sv-schedule__slider(data-slider="schedule-slider")
+                  .swiper-wrapper 
+                    .swiper-slide 
+                      .schedule-card
+                        .schedule-card__info 
+                          +svg(24, 24, 'info-in-circle')
+                        .schedule-card__inner
+                          .schedule-card__top 
+                            .schedule-card__time 18:00-19:30
+                            .schedule-card__teacher Гринев Виктор
+                          .schedule-card__bottom 7-9 лет
+                    .swiper-slide 
+                      .schedule-card
+                        .schedule-card__inner
+                          .schedule-card__info 
+                            +svg(24, 24, 'info-in-circle')
+                          .schedule-card__top 
+                            .schedule-card__time 18:00-19:30
+                            .schedule-card__teacher Гринев Виктор
+                          .schedule-card__bottom 7-9 лет
+                    .swiper-slide
+                      .schedule-card
+                        .schedule-card__inner
+                          .schedule-card__info 
+                            +svg(24, 24, 'info-in-circle')
+                          .schedule-card__top 
+                            .schedule-card__time 18:00-19:30
+                            .schedule-card__teacher Гринев Виктор
+                          .schedule-card__bottom 7-9 лет
+                    .swiper-slide.schedule-card_secondary 
+                      .schedule-card
+                        .schedule-card__inner
+                          .schedule-card__info 
+                            +svg(24, 24, 'info-in-circle')
+                          .schedule-card__top 
+                            .schedule-card__time 18:00-19:30
+                            .schedule-card__teacher Гринев Виктор
+                          .schedule-card__bottom 7-9 лет
+                    .swiper-slide 
+                      .schedule-card
+                        .schedule-card__inner
+                          .schedule-card__info 
+                            +svg(24, 24, 'info-in-circle')
+                          .schedule-card__top 
+                            .schedule-card__time 18:00-19:30
+                            .schedule-card__teacher Гринев Виктор
+                          .schedule-card__bottom 7-9 лет
+                  .common-slider-scrollbar
+                    .swiper-scrollbar(data-slider-scrollbar="schedule-slider")
+                .sv-schedule__tel
+                  a(href="#").btn.btn_l +7-931-001-64 -72
+          .sv-block 
+            .sv-block__title В чем польза скалолазания?
+            .sv-block__content 
+              .sv-desc 
+                ul 
+                  li Общая физическая подготовка
+                  li Развитие мышечного корсета
+                  li Развитие гибкости
+                  li Формирование правильной осанки
+                  li Тренировка ловкости и реакции
+                  li Формирование идеальной фигуры
+                  li Интересное новое увлечение
+          .sv-block 
+            .sv-block__title Возрастные ограничения
+              span +4
+            .sv-block__content 
+              .sv-desc Для взрослых и детей 
+                b от 4х лет.
+          .sv-block 
+            .sv-block__title Ограничения по росту
+            .sv-block__content 
+              .sv-text 
+                | 1-й уровнь — до 140 см (рекомендуемый возраст — от 4-х лет)
+                br
+                | 2-3 уровни — от 120 см (рекомендуемый возраст — от 7 лет)
+                br
+                | 4-й уровень — от 140 см (рекомендуемый возраст — от 10 лет)
+                br
+                | 5-й уровень — от 150 см (рекомендуемый возраст — от 10 лет)
+          .sv-block 
+            .sv-block__title Ограничения весу
+            .sv-block__content 
+              .sv-text Максимально допустимый вес для посещения парка — 
+                b 100 кг
+          .sv-block 
+            .sv-block__title Правила посещения
+            .sv-block__content 
+              .sv-documents 
+                a(href="#").sv-documents__item 
+                  +svg(20, 20, 'document')
+                  span Правила посещения комплекса
+                a(href="#").sv-documents__item 
+                  +svg(20, 20, 'document')
+                  span Техника безопасности QuickJump
+                a(href="#").sv-documents__item 
+                  +svg(20, 20, 'document')
+                  span Техника безопасности Троллей
+                a(href="#").sv-documents__item 
+                  +svg(20, 20, 'document')
+                  span Техника безопасности в веревочном парке
+        .service__sidebar
+          .service__gallery
+            .service__gallery-title.h3 Фотогалерея
+            .service__gallery-photos 
+              .service__gallery-stack
+                picture.service__gallery-photo 
+                  img(src="./img/service/side-01.png", alt="Фото 1")
+                picture.service__gallery-photo 
+                  img(src="./img/service/side-02.png", alt="Фото 2")
+                picture.service__gallery-photo 
+                  img(src="./img/service/side-03.png", alt="Фото 3")
+                picture.service__gallery-photo 
+                  img(src="./img/service/side-04.png", alt="Фото 4")
+                picture.service__gallery-photo 
+                  img(src="./img/service/side-05.png", alt="Фото 5")
+          .service__banner 
+            .service__banner-mascot 
+              img(src="./img/decor/rokki.svg", alt="")
+            .service__banner-title.h3 Вы готовы к приключениям?
+            .service__banner-desc Приобретайте билеты для взрослых и детей или сделайте классный подарок в виде сертификата на посещение
+            .service__banner-price 
+              .service__banner-price-title Стоимость посещения:
+              .service__banner-price-summ от 99 999 руб.
+            .service__banner-actions 
+              button(type="button").btn.btn_l.btn_wide
+                span Купить билет
+                +svg(28, 28, 'tickets')
+              a(href="#").btn.btn_l.btn_wide.btn_outline Подарочный сертификат
+
+          

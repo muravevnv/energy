@@ -1,0 +1,24 @@
+include include/mixins
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Энергия высоты
+    link(rel="stylesheet", href="css/main.min.css")
+  body 
+    
+    include components/header/index
+    main 
+      include sections/hero/index
+      include sections/about/index
+      include sections/park-zones/index
+      include sections/other-services/index
+      include sections/sertificat/index
+      include sections/shorts/index
+      include sections/advantages/index
+      include sections/promo/index
+      include sections/reviews/index
+    include components/footer/index
+    include include/scripts

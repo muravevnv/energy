@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Энергия высоты</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body> 
+    <header class="header"> 
+      <div class="container"> 
+        <div class="header__inner"> 
+          <button class="header__burger" type="button" data-menu-btn="menu"><span> </span><span> </span><span> </span></button><a class="header__logo" href="#"><img src="./img/logo-letters.svg" alt="Энергия высоты"></a>
+          <div class="header__menu menu" data-menu="menu">
+            <div class="menu__inner">
+              <div class="menu__content">
+                <nav class="menu__nav"> 
+                  <ul class="menu__nav-list"> 
+                    <li class="menu__nav-item"> <a href="#">Главная </a></li>
+                    <li class="menu__nav-item menu-dropdown" data-menu-dropdown="item"> <a class="menu-dropdown__item" href="#" data-menu-dropdown="btn"><span>Все развлечения</span>
+                        <svg width="10" height="10"> 
+                          <use xlink:href="./img/sprite.svg#chevron-down"></use>
+                        </svg></a>
+                      <ul class="menu-dropdown__list" data-menu-dropdown="list">
+                        <li class="menu-dropdown__list-item"> <a href="#">Веревочный парк</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Спортивный скалодром</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Виа Феррата</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Активити зона</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Троллей</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Сеточный лабиринт</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Прыжок с крыла самолета</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Праздники для взрослых</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Секции</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Спортшкола</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Кафе</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu__nav-item"> <a href="#">Цены</a></li>
+                    <li class="menu__nav-item"> <a href="#">Расписание</a></li>
+                    <li class="menu__nav-item"> <a href="#">Акции</a></li>
+                    <li class="menu__nav-item"> <a href="#">Новости</a></li>
+                    <li class="menu__nav-item menu-dropdown" data-menu-dropdown="item"> <a class="menu-dropdown__item" href="#" data-menu-dropdown="btn"><span>О нас</span>
+                        <svg width="10" height="10"> 
+                          <use xlink:href="./img/sprite.svg#chevron-down"></use>
+                        </svg></a>
+                      <ul class="menu-dropdown__list" data-menu-dropdown="list">
+                        <li class="menu-dropdown__list-item"> <a href="#">О комплексе</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Отзывы</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Фотогалерея</a></li>
+                        <li class="menu-dropdown__list-item"> <a href="#">Галерея роликов</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="menu__contacts"><a class="menu__tel" href="tel:+78123356555">+7 (812) 335-65-55</a></div>
+                <div class="menu__bottom">
+                  <div class="menu__action"><a class="menu__soc-link btn btn_white btn_m btn_wide" href="#"> 
+                      <svg width="20" height="20"> 
+                        <use xlink:href="./img/sprite.svg#tg"></use>
+                      </svg><span>@HighEnergy_bot</span></a><a class="menu__soc-link btn btn_white btn_m btn_wide" href="#"> 
+                      <svg width="20" height="20"> 
+                        <use xlink:href="./img/sprite.svg#vk"></use>
+                      </svg><span>vk.com/highenergyspb</span></a><a class="menu__btn btn btn_wide" href="#"><span>Купить билет</span>
+                      <svg width="24" height="24"> 
+                        <use xlink:href="./img/sprite.svg#tickets"></use>
+                      </svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__toolbar"> <a class="header__tel" href="tel:+78123356555">+7 (812) 335-65-55</a>
+            <div class="header__actions">
+              <div class="header__socials">
+                <div class="socials"> <a class="socials__item" href="#"> 
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#tg"></use>
+                    </svg></a><a class="socials__item" href="#"> 
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#vk"></use>
+                    </svg></a></div>
+              </div>
+              <button class="header__btn btn btn"> <span>Купить билет</span>
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#tickets"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main> 
+      <section class="hero">
+        <div class="container"> 
+          <picture class="hero__bg"> <img src="./img/hero/bg.svg" alt=""></picture>
+          <div class="hero__top">
+            <picture class="hero__decor hero__decor_s hero__decor_top"><img src="./img/hero/decor-01.png" alt=""></picture>
+            <picture class="hero__decor hero__decor_l hero__decor_bottom"><img src="./img/hero/decor-03.png" alt=""></picture>
+            <picture class="hero__decor hero__decor_left"><img src="./img/hero/decor-02.png" alt=""></picture>
+            <picture class="hero__top-img"><img src="./img/logo.svg" alt="Энергия высоты"></picture>
+            <div class="hero__top-info"> 
+              <div class="hero__head">
+                <h1 class="hero__title h1">Самый масштабный в&nbsp;России <span>крытый веревочный парк</span></h1>
+                <div class="hero__subtitle">и спортивный скалодром высотой 17 метров!</div>
+              </div>
+              <div class="hero__desc">Является крупнейшим по протяженности трасс крытым веревочным парком в РФ (по данным Книги Рекордов России)</div>
+            </div>
+          </div>
+          <div class="hero__slider" data-slider="hero">
+            <div class="swiper-wrapper"> 
+              <div class="hero-item swiper-slide is-active" data-hero-item>
+                <picture class="hero-item__img"> <img src="./img/hero/img-01.jpg" alt="Детские праздники"></picture>
+                <div class="hero-item__info"> 
+                  <div class="hero-item__title">Детские праздники</div>
+                  <div class="hero-item__stickers"> 
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">6+</div>
+                      <div class="hero-item__sticker-desc">Возраст</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 120</div>
+                      <div class="hero-item__sticker-desc">Рост (см)</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 10</div>
+                      <div class="hero-item__sticker-desc">человек</div>
+                    </div>
+                  </div>
+                  <button class="hero-item__btn btn"> <span>Купить билет</span>
+                    <svg width="40" height="40"> 
+                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="hero-item__preview"> 
+                  <div class="hero-item__preview-title">Детские праздники</div><a class="hero-item__preview-link btn-link" href="#">
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="hero-item swiper-slide" data-hero-item>
+                <picture class="hero-item__img"> <img src="./img/hero/img-02.jpg" alt="Веревочный парк"></picture>
+                <div class="hero-item__info"> 
+                  <div class="hero-item__title">Веревочный парк</div>
+                  <div class="hero-item__stickers"> 
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">6+</div>
+                      <div class="hero-item__sticker-desc">Возраст</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 120</div>
+                      <div class="hero-item__sticker-desc">Рост (см)</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 10</div>
+                      <div class="hero-item__sticker-desc">человек</div>
+                    </div>
+                  </div>
+                  <button class="hero-item__btn btn"> <span>Купить билет</span>
+                    <svg width="40" height="40"> 
+                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="hero-item__preview"> 
+                  <div class="hero-item__preview-title">Веревочный парк</div><a class="hero-item__preview-link btn-link btn-link_m" href="#"> 
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="hero-item swiper-slide" data-hero-item>
+                <picture class="hero-item__img"> <img src="./img/hero/img-03.jpg" alt="Спортивный скалодром"></picture>
+                <div class="hero-item__info"> 
+                  <div class="hero-item__title">Спортивный скалодром</div>
+                  <div class="hero-item__stickers"> 
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">6+</div>
+                      <div class="hero-item__sticker-desc">Возраст</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 120</div>
+                      <div class="hero-item__sticker-desc">Рост (см)</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 10</div>
+                      <div class="hero-item__sticker-desc">человек</div>
+                    </div>
+                  </div>
+                  <button class="hero-item__btn btn"> <span>Купить билет</span>
+                    <svg width="40" height="40"> 
+                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="hero-item__preview"> 
+                  <div class="hero-item__preview-title">Спортивный скалодром</div><a class="hero-item__preview-link btn-link btn-link_m" href="#"> 
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="hero-item swiper-slide" data-hero-item>
+                <picture class="hero-item__img"> <img src="./img/hero/img-04.jpg" alt="Виа Феррата"></picture>
+                <div class="hero-item__info"> 
+                  <div class="hero-item__title">Виа Феррата</div>
+                  <div class="hero-item__stickers"> 
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">6+</div>
+                      <div class="hero-item__sticker-desc">Возраст</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 120</div>
+                      <div class="hero-item__sticker-desc">Рост (см)</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 10</div>
+                      <div class="hero-item__sticker-desc">человек</div>
+                    </div>
+                  </div>
+                  <button class="hero-item__btn btn"> <span>Купить билет</span>
+                    <svg width="40" height="40"> 
+                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="hero-item__preview"> 
+                  <div class="hero-item__preview-title">Виа Феррата</div><a class="hero-item__preview-link btn-link btn-link_m" href="#"> 
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="hero-item swiper-slide" data-hero-item>
+                <picture class="hero-item__img"> <img src="./img/hero/img-05.jpg" alt="Активити зона"></picture>
+                <div class="hero-item__info"> 
+                  <div class="hero-item__title">Активити зона</div>
+                  <div class="hero-item__stickers"> 
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">6+</div>
+                      <div class="hero-item__sticker-desc">Возраст</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 120</div>
+                      <div class="hero-item__sticker-desc">Рост (см)</div>
+                    </div>
+                    <div class="hero-item__sticker"> 
+                      <div class="hero-item__sticker-title">от 10</div>
+                      <div class="hero-item__sticker-desc">человек</div>
+                    </div>
+                  </div>
+                  <button class="hero-item__btn btn"> <span>Купить билет</span>
+                    <svg width="40" height="40"> 
+                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="hero-item__preview"> 
+                  <div class="hero-item__preview-title">Активити зона</div><a class="hero-item__preview-link btn-link btn-link_m" href="#"> 
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-about section">
+        <div class="container"> 
+          <div class="s-about__head"> 
+            <div class="s-about__head-main">6000&nbsp;м2 </div>
+            <div class="s-about__head-desc">увлекательных приключений и&nbsp;спорта</div>
+          </div>
+          <div class="s-about__video"> 
+            <div class="videoplayer">
+              <video class="videoplayer__frame" src="" poster="./img/about/preview.png"></video>
+              <button class="videoplayer__btn btn-play" type="button">
+                <svg width="36" height="36"> 
+                  <use xlink:href="./img/sprite.svg#play-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <picture class="s-about__bg"> <img src="./img/about/bg.svg" alt=""></picture>
+        </div>
+      </section>
+      <section class="park-zones section"> 
+        <div class="container"> 
+          <div class="section-heading"> 
+            <h2 class="section-heading-title h1">Развлекательные зоны парка</h2>
+          </div>
+          <div class="park-zones__slider" data-slider="cards">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide">
+                <div class="park-zones-card"> 
+                  <div class="park-zones-card__main"> 
+                    <picture class="park-zones-card__img"> <img src="./img/park-zones/img-01.jpg" alt="Веревочный парк"></picture>
+                    <div class="park-zones-card__stickers"> 
+                      <div class="park-zones-card__sticker">6+</div>
+                      <div class="park-zones-card__sticker">до 100 кг</div>
+                      <div class="park-zones-card__sticker">от 100 см</div>
+                    </div>
+                  </div>
+                  <div class="park-zones-card__info"> 
+                    <div class="park-zones-card__title">Веревочный парк</div>
+                    <div class="park-zones-card__desc">Высота 17 метров, уникальные маршруты и трассы различного уровня сложности удовлетворят запросы как начинающих...</div>
+                    <div class="park-zones-card__action">
+                      <button class="park-zones-card__btn btn btn_l"><span>Купить билет</span>
+                        <svg width="28" height="28"> 
+                          <use xlink:href="./img/sprite.svg#tickets"></use>
+                        </svg>
+                      </button><a class="park-zones-card__link btn-link" href="#">
+                        <svg width="24" height="24"> 
+                          <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="park-zones-card"> 
+                  <div class="park-zones-card__main"> 
+                    <picture class="park-zones-card__img"> <img src="./img/park-zones/img-02.jpg" alt="Спортивный скалодром"></picture>
+                    <div class="park-zones-card__stickers"> 
+                      <div class="park-zones-card__sticker">6+</div>
+                      <div class="park-zones-card__sticker">до 100 кг</div>
+                      <div class="park-zones-card__sticker">от 100 см</div>
+                    </div>
+                  </div>
+                  <div class="park-zones-card__info"> 
+                    <div class="park-zones-card__title">Спортивный скалодром</div>
+                    <div class="park-zones-card__desc">Высота 17 метров, уникальные маршруты и трассы различного уровня</div>
+                    <div class="park-zones-card__action">
+                      <button class="park-zones-card__btn btn btn_l"><span>Купить билет</span>
+                        <svg width="28" height="28"> 
+                          <use xlink:href="./img/sprite.svg#tickets"></use>
+                        </svg>
+                      </button><a class="park-zones-card__link btn-link" href="#">
+                        <svg width="24" height="24"> 
+                          <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="park-zones-card"> 
+                  <div class="park-zones-card__main"> 
+                    <picture class="park-zones-card__img"> <img src="./img/park-zones/img-03.jpg" alt="Виа Феррата"></picture>
+                    <div class="park-zones-card__stickers"> 
+                      <div class="park-zones-card__sticker">6+</div>
+                      <div class="park-zones-card__sticker">до 100 кг</div>
+                      <div class="park-zones-card__sticker">от 100 см</div>
+                    </div>
+                  </div>
+                  <div class="park-zones-card__info"> 
+                    <div class="park-zones-card__title">Виа Феррата</div>
+                    <div class="park-zones-card__desc">Высота 17 метров, уникальные маршруты и трассы различного уровня сложности удовлетворят запросы как начинающих...</div>
+                    <div class="park-zones-card__action">
+                      <button class="park-zones-card__btn btn btn_l"><span>Купить билет</span>
+                        <svg width="28" height="28"> 
+                          <use xlink:href="./img/sprite.svg#tickets"></use>
+                        </svg>
+                      </button><a class="park-zones-card__link btn-link" href="#">
+                        <svg width="24" height="24"> 
+                          <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="park-zones-card"> 
+                  <div class="park-zones-card__main"> 
+                    <picture class="park-zones-card__img"> <img src="./img/park-zones/img-04.jpg" alt="Активити зона"></picture>
+                    <div class="park-zones-card__stickers"> 
+                      <div class="park-zones-card__sticker">6+</div>
+                      <div class="park-zones-card__sticker">до 100 кг</div>
+                    </div>
+                  </div>
+                  <div class="park-zones-card__info"> 
+                    <div class="park-zones-card__title">Активити зона</div>
+                    <div class="park-zones-card__desc">Высота 17 метров, уникальные маршруты и трассы различного уровня сложности удовлетворят запросы как начинающих...</div>
+                    <div class="park-zones-card__action">
+                      <button class="park-zones-card__btn btn btn_l"><span>Купить билет</span>
+                        <svg width="28" height="28"> 
+                          <use xlink:href="./img/sprite.svg#tickets"></use>
+                        </svg>
+                      </button><a class="park-zones-card__link btn-link" href="#">
+                        <svg width="24" height="24"> 
+                          <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="common-slider-scrollbar">
+              <div class="swiper-scrollbar" data-slider-scrollbar="cards"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="other-services section"> 
+        <div class="container"> 
+          <div class="section-heading"> 
+            <h2 class="section-heading-title h1">Кроме билетов</h2>
+          </div>
+          <div class="other-services__slider" data-slider="cards">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide">
+                <div class="service-card"> 
+                  <div class="service-card__main"> 
+                    <picture class="service-card__img"> <img src="./img/other-services/img-01.jpg" alt="Детский праздник на скалодроме или в веревочном парке"></picture>
+                    <div class="service-card__stickers"> 
+                      <div class="service-card__sticker">6+</div>
+                      <div class="service-card__sticker">до 100 кг</div>
+                      <div class="service-card__sticker">от 100 см</div>
+                    </div>
+                  </div>
+                  <div class="service-card__info"> 
+                    <div class="service-card__title">Детский праздник на скалодроме или в веревочном парке</div><a class="service-card__link btn-link" href="#">
+                      <svg width="24" height="24"> 
+                        <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-card"> 
+                  <div class="service-card__main"> 
+                    <picture class="service-card__img"> <img src="./img/other-services/img-01.jpg" alt="Праздники для взрослых и корпоративы"></picture>
+                    <div class="service-card__stickers"> 
+                      <div class="service-card__sticker">6+</div>
+                      <div class="service-card__sticker">до 100 кг</div>
+                      <div class="service-card__sticker">от 100 см</div>
+                    </div>
+                  </div>
+                  <div class="service-card__info"> 
+                    <div class="service-card__title">Праздники для взрослых и корпоративы</div><a class="service-card__link btn-link" href="#">
+                      <svg width="24" height="24"> 
+                        <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-card"> 
+                  <div class="service-card__main"> 
+                    <picture class="service-card__img"> <img src="./img/other-services/img-01.jpg" alt="Секции"></picture>
+                    <div class="service-card__stickers"> 
+                      <div class="service-card__sticker">6+</div>
+                      <div class="service-card__sticker">до 100 кг</div>
+                      <div class="service-card__sticker">от 100 см</div>
+                    </div>
+                  </div>
+                  <div class="service-card__info"> 
+                    <div class="service-card__title">Секции</div><a class="service-card__link btn-link" href="#">
+                      <svg width="24" height="24"> 
+                        <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-card"> 
+                  <div class="service-card__main"> 
+                    <picture class="service-card__img"> <img src="./img/other-services/img-01.jpg" alt="Кафе"></picture>
+                    <div class="service-card__stickers"> 
+                      <div class="service-card__sticker">6+</div>
+                      <div class="service-card__sticker">до 100 кг</div>
+                    </div>
+                  </div>
+                  <div class="service-card__info"> 
+                    <div class="service-card__title">Кафе</div><a class="service-card__link btn-link" href="#">
+                      <svg width="24" height="24"> 
+                        <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-card"> 
+                  <div class="service-card__main"> 
+                    <picture class="service-card__img"> <img src="./img/other-services/img-01.jpg" alt="Детский праздник на скалодроме или в веревочном парке"></picture>
+                    <div class="service-card__stickers"> 
+                      <div class="service-card__sticker">6+</div>
+                      <div class="service-card__sticker">до 100 кг</div>
+                      <div class="service-card__sticker">от 100 см</div>
+                    </div>
+                  </div>
+                  <div class="service-card__info"> 
+                    <div class="service-card__title">Детский праздник на скалодроме или в веревочном парке</div><a class="service-card__link btn-link" href="#">
+                      <svg width="24" height="24"> 
+                        <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-card"> 
+                  <div class="service-card__main"> 
+                    <picture class="service-card__img"> <img src="./img/other-services/img-01.jpg" alt="Праздники для взрослых и корпоративы"></picture>
+                    <div class="service-card__stickers"> 
+                      <div class="service-card__sticker">6+</div>
+                      <div class="service-card__sticker">до 100 кг</div>
+                      <div class="service-card__sticker">от 100 см</div>
+                    </div>
+                  </div>
+                  <div class="service-card__info"> 
+                    <div class="service-card__title">Праздники для взрослых и корпоративы</div><a class="service-card__link btn-link" href="#">
+                      <svg width="24" height="24"> 
+                        <use xlink:href="./img/sprite.svg#arrow-link"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="common-slider-scrollbar">
+              <div class="swiper-scrollbar" data-slider-scrollbar="cards"></div>
+            </div>
+          </div>
+          <picture class="other-services__bg"> <img src="./img/other-services/bg.svg" alt=""></picture>
+        </div>
+      </section>
+      <section class="section sertiifcat"> 
+        <div class="container"> 
+          <div class="sertificat__head"> 
+            <h2 class="sertificat__title"><span> Подарочный сертификат </span>на&nbsp;посещение парка</h2>
+            <div class="sertificat__desc">
+              <div class="sertificat__desc-title">Самое ценное — это впечатления! Подари близким эмоции, которые останутся надолго!</div>
+              <div class="sertificat__desc-text">Внешний вид сертификата может отличаться. При покупке на сайте, вы приобретаете стандартный электронный билет. Красивый сертификат можно купить только в парке или заказать доставку по телефону <a href="#">+7 (812) 335-65-55</a></div>
+            </div>
+          </div>
+          <div class="sertificat__inner">
+            <div class="sertificat__main"> 
+              <picture class="sertificat__ticket"> 
+                <source srcset="./img/ticket/ticket-sm.svg" media="(max-width: 560px)"><img src="./img/ticket/ticket.svg" alt="">
+              </picture><a class="sertificat__btn btn btn_l" href="#"><span>Купить сертификат</span>
+                <svg width="28" height="28"> 
+                  <use xlink:href="./img/sprite.svg#tickets"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="shorts section"> 
+        <div class="container"> 
+          <div class="section-heading"> 
+            <h2 class="section-heading-title h1">Карусель клипов</h2><a class="section-heading-btn btn" href="#">Все клипы</a>
+          </div>
+          <div class="shorts__slider" data-slider="shorts">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide"> 
+                <div class="shorts-card">
+                  <picture class="shorts-card__img"> <img src="./img/shorts/img-01.jpg" alt="Клип"></picture>
+                  <div class="shorts-card__play-btn btn-play"> 
+                    <svg width="36" height="36"> 
+                      <use xlink:href="./img/sprite.svg#play-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="shorts-card__views"> 
+                    <svg width="16" height="16"> 
+                      <use xlink:href="./img/sprite.svg#eye"></use>
+                    </svg><span>1 000 000 086</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shorts-card">
+                  <picture class="shorts-card__img"> <img src="./img/shorts/img-02.jpg" alt="Клип"></picture>
+                  <div class="shorts-card__play-btn btn-play"> 
+                    <svg width="36" height="36"> 
+                      <use xlink:href="./img/sprite.svg#play-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="shorts-card__views"> 
+                    <svg width="16" height="16"> 
+                      <use xlink:href="./img/sprite.svg#eye"></use>
+                    </svg><span>1 000 000 086</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shorts-card">
+                  <picture class="shorts-card__img"> <img src="./img/shorts/img-03.jpg" alt="Клип"></picture>
+                  <div class="shorts-card__play-btn btn-play"> 
+                    <svg width="36" height="36"> 
+                      <use xlink:href="./img/sprite.svg#play-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="shorts-card__views"> 
+                    <svg width="16" height="16"> 
+                      <use xlink:href="./img/sprite.svg#eye"></use>
+                    </svg><span>1 000 000 086</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shorts-card">
+                  <picture class="shorts-card__img"> <img src="./img/shorts/img-04.jpg" alt="Клип"></picture>
+                  <div class="shorts-card__play-btn btn-play"> 
+                    <svg width="36" height="36"> 
+                      <use xlink:href="./img/sprite.svg#play-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="shorts-card__views"> 
+                    <svg width="16" height="16"> 
+                      <use xlink:href="./img/sprite.svg#eye"></use>
+                    </svg><span>1 000 000 086</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shorts-card">
+                  <picture class="shorts-card__img"> <img src="./img/shorts/img-01.jpg" alt="Клип"></picture>
+                  <div class="shorts-card__play-btn btn-play"> 
+                    <svg width="36" height="36"> 
+                      <use xlink:href="./img/sprite.svg#play-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="shorts-card__views"> 
+                    <svg width="16" height="16"> 
+                      <use xlink:href="./img/sprite.svg#eye"></use>
+                    </svg><span>1 000 000 086</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shorts-card">
+                  <picture class="shorts-card__img"> <img src="./img/shorts/img-02.jpg" alt="Клип"></picture>
+                  <div class="shorts-card__play-btn btn-play"> 
+                    <svg width="36" height="36"> 
+                      <use xlink:href="./img/sprite.svg#play-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="shorts-card__views"> 
+                    <svg width="16" height="16"> 
+                      <use xlink:href="./img/sprite.svg#eye"></use>
+                    </svg><span>1 000 000 086</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="common-slider-scrollbar">
+              <div class="swiper-scrollbar" data-slider-scrollbar="shorts"></div>
+            </div>
+            <div class="shorts__bottom"> <a class="btn btn_wide" href="#">Все отзывы</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="advantages section"> 
+        <div class="container"> 
+          <div class="advantages__head">
+            <div class="advantages__title">Энергия Высоты — место, где соединяются <span>спортивная </span>и <span>развлекательная </span>ниши</div>
+            <div class="advantages__desc">
+               Комплекс объединяет самый масштабный в России крытый веревочный парк* и спортивный 
+              скалодром высотой 17 метров. С 2019 года Энергия Высоты предоставляет уникальные 
+              возможности для активного отдыха, предлагая каждому шанс отвлечься от рутины 
+              и провести свободное время с пользой для себя!
+            </div>
+          </div>
+          <div class="advantages__items"> 
+            <div class="advantages__item"> 
+              <div class="advantages__item-img"> <img src="./img/advantages/img-01.svg" alt=""></div>
+              <div class="advantages__item-title">Безопасность — это наш приоритет!</div>
+              <div class="advantages__item-desc">Трассы веревочного парка регулярно проходят обслуживание и необходимые инспекции. Все снаряжение сертифицировано. На маршрутах используется непрерывная система страховки!</div>
+            </div>
+            <div class="advantages__item"> 
+              <div class="advantages__item-img"> <img src="./img/advantages/img-02.svg" alt=""></div>
+              <div class="advantages__item-title">Высокий уровень комфорта</div>
+              <div class="advantages__item-desc">Мы стремимся создать комфортную атмосферу для всех посетителей. В нашем комплексе предусмотрены современные раздевалки с душевыми, сауна, зоны отдыха, а также уютное кафе</div>
+            </div>
+            <div class="advantages__item"> 
+              <div class="advantages__item-img"> <img src="./img/advantages/img-03.svg" alt=""></div>
+              <div class="advantages__item-title">Активный отдых для всех</div>
+              <div class="advantages__item-desc">Мы предлагаем разнообразные активности для людей всех возрастов и уровней подготовки</div>
+            </div>
+            <div class="advantages__item"> 
+              <div class="advantages__item-img"> <img src="./img/advantages/img-04.svg" alt=""></div>
+              <div class="advantages__item-title">Постоянное развитие</div>
+              <div class="advantages__item-desc">Мы постоянно развиваем наш Комплекс, внедряя новые локации и повышая уровень удобства, чтобы наши гости наслаждались активным отдыхом!</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-promo section"> 
+        <div class="container"> 
+          <div class="section-heading"> 
+            <h2 class="section-heading-title h1">Акции парка</h2><a class="section-heading-btn btn" href="#">Все акции</a>
+          </div>
+          <div class="s-promo__slider" data-slider="promo">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide"> <a class="promo-card" href="#">
+                  <picture class="promo-card__img"> <img src="./img/promo/promo-01.jpg" alt="Клип"></picture>
+                  <div class="promo-card__info">
+                    <div class="promo-card__date">до 22.03.25</div>
+                    <div class="promo-card__title">Мы ждем именно тебя! Актуальные вакансии</div>
+                  </div></a></div>
+              <div class="swiper-slide"> <a class="promo-card" href="#">
+                  <picture class="promo-card__img"> <img src="./img/promo/promo-02.jpg" alt="Клип"></picture>
+                  <div class="promo-card__info">
+                    <div class="promo-card__date">до 10.04.25</div>
+                    <div class="promo-card__title">Приключения вдвоем</div>
+                  </div></a></div>
+              <div class="swiper-slide"> <a class="promo-card" href="#">
+                  <picture class="promo-card__img"> <img src="./img/promo/promo-03.jpg" alt="Клип"></picture>
+                  <div class="promo-card__info">
+                    <div class="promo-card__date">бессрочно</div>
+                    <div class="promo-card__title">Скидочные дни</div>
+                  </div></a></div>
+              <div class="swiper-slide"> <a class="promo-card" href="#">
+                  <picture class="promo-card__img"> <img src="./img/promo/promo-04.jpg" alt="Клип"></picture>
+                  <div class="promo-card__info">
+                    <div class="promo-card__date">до 14.03.25</div>
+                    <div class="promo-card__title">Скидки компаниям от 4 человек</div>
+                  </div></a></div>
+              <div class="swiper-slide"> <a class="promo-card" href="#">
+                  <picture class="promo-card__img"> <img src="./img/promo/promo-01.jpg" alt="Клип"></picture>
+                  <div class="promo-card__info">
+                    <div class="promo-card__date">до 22.03.25</div>
+                    <div class="promo-card__title">Мы ждем именно тебя! Актуальные вакансии</div>
+                  </div></a></div>
+              <div class="swiper-slide"> <a class="promo-card" href="#">
+                  <picture class="promo-card__img"> <img src="./img/promo/promo-02.jpg" alt="Клип"></picture>
+                  <div class="promo-card__info">
+                    <div class="promo-card__date">до 10.04.25</div>
+                    <div class="promo-card__title">Приключения вдвоем</div>
+                  </div></a></div>
+            </div>
+            <div class="common-slider-scrollbar">
+              <div class="swiper-scrollbar" data-slider-scrollbar="promo"></div>
+            </div>
+            <div class="s-promo__bottom"> <a class="btn btn_wide" href="#">Все акции</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews section">  
+        <div class="container"> 
+          <div class="section-heading"> 
+            <h2 class="section-heading-title h1">Ваше мнение о нас</h2><a class="section-heading-btn btn" href="#">Все отзывы</a>
+          </div>
+          <div class="reviews__slider" data-slider="reviews">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide"> 
+                <div class="reviews-card">
+                  <div class="reviews-card__date">21.02.2025</div>
+                  <div class="reviews-card__rating"> 
+                    <div class="reviews-card__source"> <img src="./img/reviews/source.svg" alt="Яндекс"></div>
+                    <div class="reviews-card__stars">
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews-card__desc">Отличное место! Рекомендую</div>
+                  <div class="reviews-card__author">Алиса В.</div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="reviews-card">
+                  <div class="reviews-card__date">21.02.2025</div>
+                  <div class="reviews-card__rating"> 
+                    <div class="reviews-card__source"> <img src="./img/reviews/source.svg" alt="Яндекс"></div>
+                    <div class="reviews-card__stars">
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews-card__desc">Отличное место! Рекомендую</div>
+                  <div class="reviews-card__author">Алиса В.</div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="reviews-card">
+                  <div class="reviews-card__date">27.02.2025</div>
+                  <div class="reviews-card__rating"> 
+                    <div class="reviews-card__source"> <img src="./img/reviews/source.svg" alt="Яндекс"></div>
+                    <div class="reviews-card__stars">
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews-card__desc">Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей и всем, кто любит активный вид отдыха. Уехали уставшие, но c отличным настроением.</div>
+                  <div class="reviews-card__author">Михаил К.</div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="reviews-card">
+                  <div class="reviews-card__date">03.03.2025</div>
+                  <div class="reviews-card__rating"> 
+                    <div class="reviews-card__source"> <img src="./img/reviews/source.svg" alt="Яндекс"></div>
+                    <div class="reviews-card__stars">
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews-card__desc">Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей и всем, кто любит активный вид отдыха.</div>
+                  <div class="reviews-card__author">Павел Р.</div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="reviews-card">
+                  <div class="reviews-card__date">06.03.2025</div>
+                  <div class="reviews-card__rating"> 
+                    <div class="reviews-card__source"> <img src="./img/reviews/source.svg" alt="Яндекс"></div>
+                    <div class="reviews-card__stars">
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star is-highlighted"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="reviews-card__star"> 
+                        <svg width="20" height="20"> 
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews-card__desc">Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей и всем, кто любит спорт на свежем воздухе. </div>
+                  <div class="reviews-card__author">Алла С.</div>
+                </div>
+              </div>
+            </div>
+            <div class="common-slider-scrollbar">
+              <div class="swiper-scrollbar" data-slider-scrollbar="reviews"></div>
+            </div>
+            <div class="common-slider-buttons"> 
+              <button class="common-slider-btn" type="button" data-slider-prev="reviews"> 
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                </svg>
+              </button>
+              <button class="common-slider-btn" type="button" data-slider-next="reviews"> 
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="reviews__bottom"> <a class="btn btn_wide" href="#">Все отзывы</a></div>
+          </div>
+          <picture class="reviews__bg"> <img src="./img/reviews/bg.svg" alt=""></picture>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer__inner"> <a class="footer__logo" href="#"><img src="./img/logo.svg" alt="Энергия высоты"></a>
+          <div class="footer__main">
+            <nav class="footer__nav">
+              <div class="footer__nav-title">О комплексе</div>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"> <a href="#">Новости</a></li>
+                <li class="footer__nav-item"> <a href="#">Блог</a></li>
+                <li class="footer__nav-item"> <a href="#">Цены</a></li>
+                <li class="footer__nav-item"> <a href="#">Акции</a></li>
+                <li class="footer__nav-item"> <a href="#">Отзывы</a></li>
+                <li class="footer__nav-item"> <a href="#">Спортшкола</a></li>
+                <li class="footer__nav-item"> <a href="#">Расписание занятий</a></li>
+                <li class="footer__nav-item"> <a href="#">Часто задаваемые вопросы</a></li>
+                <li class="footer__nav-item"> <a href="#">Контакты</a></li>
+                <li class="footer__nav-item"> <a href="#">Правовая информация</a></li>
+              </ul>
+            </nav>
+            <nav class="footer__nav">
+              <div class="footer__nav-title">Развлечения</div>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"> <a href="#">Веревочный парк</a></li>
+                <li class="footer__nav-item"> <a href="#">Спортивный скалодром </a></li>
+                <li class="footer__nav-item"> <a href="#">Виа Феррата </a></li>
+                <li class="footer__nav-item"> <a href="#">Сеточный лабиринт</a></li>
+                <li class="footer__nav-item"> <a href="#">Троллей </a></li>
+                <li class="footer__nav-item"> <a href="#">Прыжок с крыла самолета </a></li>
+                <li class="footer__nav-item"> <a href="#">Для активного </a></li>
+              </ul>
+            </nav>
+            <nav class="footer__nav">
+              <div class="footer__nav-title">Услуги</div>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"> <a href="#">Кафе</a></li>
+                <li class="footer__nav-item"> <a href="#">Детские праздники</a></li>
+                <li class="footer__nav-item"> <a href="#">Праздники для взрослых </a></li>
+                <li class="footer__nav-item"> <a href="#">Корпоративы </a></li>
+                <li class="footer__nav-item"> <a href="#">Секции </a></li>
+                <li class="footer__nav-item"> <a href="#">Организаторам туров</a></li>
+                <li class="footer__nav-item"> <a href="#">Франшиза</a></li>
+                <li class="footer__nav-item"> <a href="#">Для активного </a></li>
+              </ul>
+            </nav>
+            <div class="footer__contacts"><a class="footer__contacts-tel" href="#"> 
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#tel"></use>
+                </svg><span>+7 (812) 335-65-55</span></a>
+              <div class="footer__contacts-info"> 
+                <div class="footer__contacts-address"> 
+                  <svg width="24" height="24"> 
+                    <use xlink:href="./img/sprite.svg#address"></use>
+                  </svg><span>СПб, ул. Софийская, 14</span>
+                </div>
+                <div class="footer__contacts-schedule"> 
+                  <div class="footer__contacts-schedule-item">10:00-22:00<span>Веревочный парк</span></div>
+                  <div class="footer__contacts-schedule-item">10:00-23:00<span>Скалодром</span></div>
+                </div>
+              </div>
+              <div class="footer__contacts-socials">
+                <div class="socials"> <a class="socials__item socials__item_l socials__item_grey" href="#">
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#vk"></use>
+                    </svg></a><a class="socials__item socials__item_l socials__item_grey" href="#">
+                    <svg width="20" height="20"> 
+                      <use xlink:href="./img/sprite.svg#tg"></use>
+                    </svg></a></div>
+              </div><a class="footer__contacts-btn btn btn_wide" href="#"><span>Купить билет</span>
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#tickets"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="footer__bottom"><a class="footer__policy" href="#">Политика обработки персональных данных</a>
+            <div class="footer__copy"> © 2022. Все права защищены </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

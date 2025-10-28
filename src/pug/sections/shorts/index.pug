@@ -1,0 +1,48 @@
+- 
+  var shorts = [
+    {
+      img: '01',
+      views: '1 000 000 086',
+    },
+    {
+      img: '02',
+      views: '1 000 000 086',
+    },
+    {
+      img: '03',
+      views: '1 000 000 086',
+    },
+    {
+      img: '04',
+      views: '1 000 000 086',
+    },
+    {
+      img: '01',
+      views: '1 000 000 086',
+    },
+    {
+      img: '02',
+      views: '1 000 000 086',
+    },
+  ]
+
+section.shorts.section 
+  .container 
+    +section-heading('Карусель клипов', 'Все клипы')
+    .shorts__slider(data-slider="shorts")
+      .swiper-wrapper 
+        for item in shorts
+          .swiper-slide 
+            .shorts-card
+              picture.shorts-card__img 
+                img(src=`./img/shorts/img-${item.img}.jpg`, alt="Клип")
+              .shorts-card__play-btn.btn-play 
+                +svg(36, 36, 'play-arrow')
+              .shorts-card__views 
+                +svg(16, 16, 'eye')
+                span= item.views
+      .common-slider-scrollbar
+        .swiper-scrollbar(data-slider-scrollbar="shorts")
+      .shorts__bottom 
+        a(href="#").btn.btn_wide Все отзывы
+            

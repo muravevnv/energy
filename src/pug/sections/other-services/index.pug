@@ -1,0 +1,51 @@
+- 
+  var otherServices = [
+    {
+      title: 'Детский праздник на скалодроме или в веревочном парке',
+      stickers: ['6+', 'до 100 кг', 'от 100 см'],
+    },
+    {
+      title: 'Праздники для взрослых и корпоративы',
+      stickers: ['6+', 'до 100 кг', 'от 100 см'],
+    },
+    {
+      title: 'Секции',
+      stickers: ['6+', 'до 100 кг', 'от 100 см'],
+    },
+    {
+      title: 'Кафе',
+      stickers: ['6+', 'до 100 кг'],
+    },
+        {
+      title: 'Детский праздник на скалодроме или в веревочном парке',
+      stickers: ['6+', 'до 100 кг', 'от 100 см'],
+    },
+    {
+      title: 'Праздники для взрослых и корпоративы',
+      stickers: ['6+', 'до 100 кг', 'от 100 см'],
+    }
+  ]
+
+section.other-services.section 
+  .container 
+    +section-heading('Кроме билетов', false)
+    .other-services__slider(data-slider="cards")
+      .swiper-wrapper 
+        for item in otherServices
+          .swiper-slide
+            .service-card 
+              .service-card__main 
+                picture.service-card__img 
+                  img(src=`./img/other-services/img-01.jpg`, alt=`${item.title}`)
+                .service-card__stickers 
+                  for sticker in item.stickers
+                    .service-card__sticker= sticker
+              .service-card__info 
+                .service-card__title= item.title
+                a(href="#").service-card__link.btn-link
+                  +svg(24, 24, 'arrow-link')
+      .common-slider-scrollbar
+        .swiper-scrollbar(data-slider-scrollbar="cards")
+    picture.other-services__bg 
+      img(src="./img/other-services/bg.svg", alt="")
+

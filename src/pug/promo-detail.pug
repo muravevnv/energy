@@ -1,0 +1,20 @@
+include include/mixins
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Скидки в дни школьных каникул
+    link(rel="stylesheet", href="css/main.min.css")
+  body 
+    
+    include components/header/index
+    main 
+      +breadcrumbs(['Главная', 'Акции', 'Скидки в дни школьных каникул'])
+      include sections/promo-detail/index
+      include sections/promo/index
+      include sections/sertificat/index
+      include sections/advantages/index
+    include components/footer/index
+    include include/scripts

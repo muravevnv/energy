@@ -1,0 +1,153 @@
+-
+  var heroItems = [
+    {
+      img: '01',
+      title: 'Детские праздники',
+      active: true,
+      stickers: [
+        {
+          title: '6+',
+          desc: 'Возраст',
+        },
+        {
+          title: 'от 120',
+          desc: 'Рост (см)',
+        },
+        {
+          title: 'от 10',
+          desc: 'человек',
+        },
+      ]
+    },
+    {
+      img: '02',
+      title: 'Веревочный парк',
+      stickers: [
+        {
+          title: '6+',
+          desc: 'Возраст',
+        },
+        {
+          title: 'от 120',
+          desc: 'Рост (см)',
+        },
+        {
+          title: 'от 10',
+          desc: 'человек',
+        },
+      ]
+    },
+    {
+      img: '03',
+      title: 'Спортивный скалодром',
+      stickers: [
+        {
+          title: '6+',
+          desc: 'Возраст',
+        },
+        {
+          title: 'от 120',
+          desc: 'Рост (см)',
+        },
+        {
+          title: 'от 10',
+          desc: 'человек',
+        },
+      ]
+    },
+    {
+      img: '04',
+      title: 'Виа Феррата',
+      stickers: [
+        {
+          title: '6+',
+          desc: 'Возраст',
+        },
+        {
+          title: 'от 120',
+          desc: 'Рост (см)',
+        },
+        {
+          title: 'от 10',
+          desc: 'человек',
+        },
+      ]
+    },
+    {
+      img: '05',
+      title: 'Активити зона',
+      stickers: [
+        {
+          title: '6+',
+          desc: 'Возраст',
+        },
+        {
+          title: 'от 120',
+          desc: 'Рост (см)',
+        },
+        {
+          title: 'от 10',
+          desc: 'человек',
+        },
+      ]
+    },
+  ]
+
+section.hero
+  .container 
+    picture.hero__bg 
+      img(src="./img/hero/bg.svg", alt="")
+    .hero__top
+      picture.hero__decor.hero__decor_s.hero__decor_top
+        img(src="./img/hero/decor-01.png", alt="")
+      picture.hero__decor.hero__decor_l.hero__decor_bottom
+        img(src="./img/hero/decor-03.png", alt="")
+      picture.hero__decor.hero__decor_left
+        img(src="./img/hero/decor-02.png", alt="")
+      picture.hero__top-img
+        img(src="./img/logo.svg", alt="Энергия высоты") 
+      .hero__top-info 
+        .hero__head
+          h1.hero__title.h1 Самый масштабный в&nbsp;России 
+            span крытый веревочный парк
+          .hero__subtitle и спортивный скалодром высотой 17 метров!
+        .hero__desc Является крупнейшим по протяженности трасс крытым веревочным парком в РФ (по данным Книги Рекордов России)
+    .hero__slider(data-slider="hero")
+      .swiper-wrapper 
+        for item in heroItems
+          if item.active
+            .hero-item.swiper-slide.is-active(data-hero-item)
+              picture.hero-item__img 
+                img(src=`./img/hero/img-${item.img}.jpg`, alt=`${item.title}`)
+              .hero-item__info 
+                .hero-item__title= item.title 
+                .hero-item__stickers 
+                  for sticker in item.stickers
+                    .hero-item__sticker 
+                      .hero-item__sticker-title= sticker.title
+                      .hero-item__sticker-desc= sticker.desc
+                button.hero-item__btn.btn 
+                  span Купить билет
+                  +svg(40, 40, 'tickets')
+              .hero-item__preview 
+                .hero-item__preview-title= item.title
+                a(href="#").hero-item__preview-link.btn-link
+                  +svg(20, 20, 'arrow-link')
+          else
+            .hero-item.swiper-slide(data-hero-item)
+              picture.hero-item__img 
+                img(src=`./img/hero/img-${item.img}.jpg`, alt=`${item.title}`)
+              .hero-item__info 
+                .hero-item__title= item.title 
+                .hero-item__stickers 
+                  for sticker in item.stickers
+                    .hero-item__sticker 
+                      .hero-item__sticker-title= sticker.title
+                      .hero-item__sticker-desc= sticker.desc
+                button.hero-item__btn.btn 
+                  span Купить билет
+                  +svg(40, 40, 'tickets')
+              .hero-item__preview 
+                .hero-item__preview-title= item.title
+                a(href="#").hero-item__preview-link.btn-link.btn-link_m 
+                  +svg(20, 20, 'arrow-link')

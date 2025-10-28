@@ -1,0 +1,245 @@
+.footer {
+  padding: 48px 0;
+
+  @include mq($xl) {
+    padding: 36px 0;
+  }
+
+  @include mq($s) {
+    padding: 40px 0;
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    padding-top: 35px;
+    border-top: 1px solid var(--color-blck-50);
+
+    @include mq($xxl) {
+      padding-top: 38px;
+    }
+
+    @include mq($xl) {
+      padding-top: 35px;
+    }
+
+    @include mq($m) {
+      gap: 24px;
+    }
+
+    @include mq($s) {
+      padding-top: 23px;
+    }
+  }
+
+  &__logo {
+    width: 120px;
+    height: 120px;
+
+    @include mq($l) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @include mq($xl) {
+      grid-template-columns: auto auto auto 260px;
+      gap: 20px;
+    }
+
+    @include mq($l) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px 20px;
+    }
+
+    @include mq($s) {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-top: 35px;
+    margin-top: 36px;
+    border-top: 1px solid var(--color-blck-50);
+
+    @include mq($xxl) {
+      padding-top: 38px;
+      margin-top: 39px;
+    }
+
+    @include mq($xl) {
+      margin-top: 36px;
+      padding-top: 35px;
+    }
+
+    @include mq($m) {
+      margin-top: 0;
+    }
+
+    @include mq($s) {
+      padding-top: 23px;
+    }
+  }
+
+  &__policy,
+  &__copy {
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--color-grey-dark);
+    text-align: center;
+  }
+
+  &__policy {
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+
+    @include mq-hover {
+      color: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__nav {
+
+    &-title {
+      font-family: var(--font-secondary);
+      line-height: 1.5;
+      margin-bottom: 16px;
+
+      @include mq($s) {
+        text-align: center;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      @include mq($s) {
+        align-items: center;
+      }
+    }
+
+    &-item {
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--color-grey-dark);
+      display: block;
+
+      >a {
+        transition: color 0.3s ease;
+
+        @include mq-hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+
+    @include mq($l) {
+      grid-column: span 3;
+      align-items: center;
+      gap: 24px;
+    }
+
+    @include mq($m) {
+      gap: 36px;
+    }
+
+    &-tel {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.5;
+      font-family: var(--font-secondary);
+      transition: color 0.3s ease;
+
+      @include mq($l) {
+        flex-direction: column;
+      }
+
+      @include mq-hover {
+        color: var(--color-accent);
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      @include mq($l) {
+        align-items: center;
+      }
+    }
+
+    &-address {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.5;
+      font-family: var(--font-secondary);
+
+      @include mq($l) {
+        flex-direction: column;
+      }
+    }
+
+    &-schedule {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding-left: 32px;
+
+      @include mq($l) {
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+      }
+
+      &-item {
+        font-family: var(--font-secondary);
+        line-height: 1.5;
+
+        span {
+          display: block;
+          margin-top: 4;
+          font-family: var(--font-primary);
+          font-size: 14px;
+          line-height: 1.4;
+          color: var(--color-grey-dark);
+        }
+      }
+    }
+
+    .socials {
+      gap: 12px;
+    }
+  }
+}

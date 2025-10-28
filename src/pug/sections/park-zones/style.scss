@@ -1,0 +1,146 @@
+.park-zones {
+  overflow: hidden;
+
+  &__slider {
+    position: relative;
+
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      width: 452px;
+      height: auto;
+
+      @include mq($s) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.park-zones-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 48px;
+  background-color: var(--color-grey-light);
+
+  &__main {
+    position: relative;
+    height: 361px;
+    flex-shrink: 0;
+
+    @include mq($m) {
+      height: 274px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 48px;
+    }
+  }
+
+  &__stickers {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  &__sticker {
+    padding: 8px 16px;
+    background-color: var(--color-bg-main);
+    border-radius: 72px;
+    font-family: var(--font-secondary);
+
+    @include mq($m) {
+      padding: 4px 12px;
+      font-size: 14px;
+      line-height: 1.44;
+    }
+  }
+
+  &__info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include mq($m) {
+      padding: 24px 16px;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-secondary);
+    font-size: 24px;
+    line-height: 1.34;
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    line-height: 1.56;
+    font-weight: 300;
+    color: var(--color-blck-700);
+    margin-bottom: 44px;
+
+    @include mq($m) {
+      -webkit-line-clamp: 4;
+      margin-bottom: 38px;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  &__btn {
+    flex-grow: 1;
+
+    @include mq($m) {
+
+      &.btn {
+        span {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    span {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    flex-shrink: 0;
+  }
+}

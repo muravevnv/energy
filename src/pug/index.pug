@@ -1,0 +1,61 @@
+include include/mixins
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Энергия высоты
+    link(rel="stylesheet", href="css/main.min.css")
+  body 
+    
+    include components/header/index
+    main 
+      .container
+        ul(style="margin: 24px 0; display: flex; flex-direction: column; gap: 16px;")
+          li 
+            a(href="home.html") Главная
+          li 
+            a(href="services.html") Услуги
+          li 
+            a(href="service.html") Шаблон лендинга
+          li 
+            a(href="service-rope-park.html") Веревочный парк
+          li 
+            a(href="service-sports-climbing-wall.html") Спортивный скалодром
+          li 
+            a(href="service-via-feratta.html") Виа Феррата
+          li 
+            a(href="service-activity-zone.html") Активити зона
+          li 
+            a(href="service-cafe.html") Кафе
+          li 
+            a(href="service-for-kids.html") Праздники для детей
+          li 
+            a(href="service-for-adults.html") Праздники для взрослых и корпоративы
+          li 
+            a(href="service-sport-section.html") Секции
+          li 
+            a(href="service-about-us.html") О комплексе
+          li 
+            a(href="service-school.html") Спортивная школа скалолазания
+          li 
+            a(href="contacts.html") Контакты
+          li 
+            a(href="blog.html") Новости
+          li 
+            a(href="article.html") Статья
+          li 
+            a(href="promo-list.html") Акции
+          li 
+            a(href="promo-detail.html") Акция детальная
+          li 
+            a(href="videoclips.html") Карусель клипов
+          li 
+            a(href="faq.html") FAQ
+          li 
+            a(href="loyal.html") Правовая информация
+          li 
+            a(href="404.html") 404
+    include components/footer/index
+    include include/scripts
