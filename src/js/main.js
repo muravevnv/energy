@@ -255,4 +255,57 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
+
+  function initTabs(container) {
+    const buttons = container.querySelectorAll("[data-tab]");
+    const panels = container.querySelectorAll("[data-tab-content]");
+
+    function switchTab(tabId) {
+      // Деактивируем все
+      buttons.forEach((btn) => btn.classList.remove("is-active"));
+      panels.forEach((panel) => panel.classList.remove("is-active"));
+
+      // Активируем выбранные
+      const activeButton = container.querySelector(`[data-tab="${tabId}"]`);
+      const activePanel = container.querySelector(
+        `[data-tab-content="${tabId}"]`
+      );
+
+      if (activeButton) activeButton.classList.add("is-active");
+      if (activePanel) activePanel.classList.add("is-active");
+    }
+
+    // Обработчики событий
+    buttons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const tabId = button.getAttribute("data-tab");
+        switchTab(tabId);
+      });
+    });
+
+    // Активируем первый таб
+    if (buttons.length > 0) {
+      const firstTabId = buttons[0].getAttribute("data-tab");
+      switchTab(firstTabId);
+    }
+
+    // Возвращаем методы для внешнего использования
+    return {
+      switchTab,
+      getActiveTab: () => {
+        const activeButton = container.querySelector("[data-tab].is-active");
+        return activeButton ? activeButton.getAttribute("data-tab") : null;
+      },
+    };
+  }
+
+  const tabContainers = document.querySelectorAll("[data-tabs]");
+  if (tabContainers.length > 0) {
+    const tabInstances = [];
+
+    tabContainers.forEach((container) => {
+      tabInstances.push(initTabs(container));
+    });
+  }
 });
