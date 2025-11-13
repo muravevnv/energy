@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".header");
+  const headerHeight = header.offsetHeight;
+
+  document.addEventListener("scroll", function () {
+    if (window.scrollY > headerHeight) {
+      header.classList.add("is-sticky");
+    } else {
+      header.classList.remove("is-sticky");
+    }
+  });
+
   function slideToggle(element, duration = 400) {
     // Если элемент скрыт - показываем
     if (window.getComputedStyle(element).display === "none") {
@@ -129,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 800,
         scrollbar: {
           el: '[data-slider-scrollbar="hero"]',
+          draggable: true,
           hide: true,
         },
       });
@@ -162,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 800,
         scrollbar: {
           el: sliderScrollbar,
+          draggable: true,
           hide: true,
         },
         breakpoints: {
@@ -188,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       scrollbar: {
         el: '[data-slider-scrollbar="shorts"]',
+        draggable: true,
         hide: true,
       },
     });
@@ -211,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       scrollbar: {
         el: '[data-slider-scrollbar="promo"]',
+        draggable: true,
         hide: true,
       },
     });
@@ -221,11 +236,9 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: "auto",
       spaceBetween: 20,
       speed: 800,
-      centeredSlides: true,
-      initialSlide: 2,
       scrollbar: {
         el: '[data-slider-scrollbar="reviews"]',
-        hide: true,
+        draggable: true,
       },
       navigation: {
         nextEl: '[data-slider-next="reviews"]',
@@ -252,6 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollbar: {
         el: '[data-slider-scrollbar="schedule-slider"]',
         hide: true,
+        draggable: true,
       },
     });
   }
@@ -308,4 +322,34 @@ document.addEventListener("DOMContentLoaded", function () {
       tabInstances.push(initTabs(container));
     });
   }
+
+  $("[data-fancybox]").fancybox({
+    touch: false,
+    buttons: [
+      "close",
+    ],
+    animationEffect: "fade",
+    transitionEffect: "fade",
+  });
+
+  $.fancybox.defaults.afterShow = function (instance, current) {
+    if (document.querySelector('[data-slider="shorts-slider"]')) {
+      new Swiper('[data-slider="shorts-slider"]', {
+        slidesPerView: 1,
+        speed: 800,
+        centeredSlides: true,
+        initialSlide: 1,
+        breakpoints: {
+          992: {
+            slidesPerView: 3,
+          },
+        },
+      
+        navigation: {
+          nextEl: '[data-slider-next="shorts-slider"]',
+          prevEl: '[data-slider-prev="shorts-slider"]',
+        },
+      });
+    }
+  };
 });

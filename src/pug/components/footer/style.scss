@@ -243,3 +243,26 @@
     }
   }
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-white);
+  color: var(--color-blck);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px -8px #00000033;
+  transition: 0.2s ease;
+  z-index: 90;
+
+  @include mq-hover {
+    background-color: var(--color-accent-25);
+    color: var(--color-accent);
+  }
+}

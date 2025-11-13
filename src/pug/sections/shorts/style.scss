@@ -20,9 +20,19 @@
   border-radius: var(--rounded-3xl);
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
 
   @include mq($m) {
     border-radius: var(--rounded-xl);
+  }
+
+  @include mq-hover {
+
+    .shorts-card__img {
+      &::before {
+        opacity: 0;
+      }
+    }
   }
 
   &__img {
@@ -44,6 +54,7 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(180deg, rgba(43, 42, 41, 0) 0%, #2B2A29 100%);
+      transition: 0.3s ease;
     }
   }
 

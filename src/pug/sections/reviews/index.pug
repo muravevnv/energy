@@ -40,23 +40,25 @@ section.reviews.section
         for item in reviews
           .swiper-slide 
             .reviews-card
-              .reviews-card__date= item.date
-              .reviews-card__rating 
-                .reviews-card__source 
-                  img(src="./img/reviews/source.svg", alt="Яндекс")
-                .reviews-card__stars
-                  .reviews-card__star.is-highlighted 
-                    +svg(20, 20, 'star')
-                  .reviews-card__star.is-highlighted 
-                    +svg(20, 20, 'star')
-                  .reviews-card__star.is-highlighted 
-                    +svg(20, 20, 'star')
-                  .reviews-card__star 
-                    +svg(20, 20, 'star')
-                  .reviews-card__star 
-                    +svg(20, 20, 'star')
+              .reviews-card__top
+                .reviews-card__main
+                  .reviews-card__author= item.author
+                  .reviews-card__rating 
+                    .reviews-card__stars
+                      .reviews-card__star.is-highlighted 
+                        +svg(20, 20, 'star')
+                      .reviews-card__star.is-highlighted 
+                        +svg(20, 20, 'star')
+                      .reviews-card__star.is-highlighted 
+                        +svg(20, 20, 'star')
+                      .reviews-card__star 
+                        +svg(20, 20, 'star')
+                      .reviews-card__star 
+                        +svg(20, 20, 'star')
+                .reviews-card__date= item.date
               .reviews-card__desc= item.desc
-              .reviews-card__author= item.author
+              .reviews-card__bottom 
+                a(href="#").reviews-card__more Читать отзыв 
       .common-slider-scrollbar
         .swiper-scrollbar(data-slider-scrollbar="reviews")
       .common-slider-buttons 

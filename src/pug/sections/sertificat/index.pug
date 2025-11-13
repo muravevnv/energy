@@ -13,6 +13,7 @@ section.section.sertiifcat
         picture.sertificat__ticket 
           source(srcset="./img/ticket/ticket-sm.svg", media="(max-width: 560px)")
           img(src="./img/ticket/ticket.svg", alt="")
-        a(href="#").sertificat__btn.btn.btn_l
-          span Купить сертификат
-          +svg(28, 28, 'tickets')
+        .sertificat__btn
+          a(href="#").btn.btn_gradient.btn_l
+            span Купить сертификат
+            +svg(28, 28, 'tickets')

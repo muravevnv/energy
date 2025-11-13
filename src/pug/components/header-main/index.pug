@@ -1,0 +1,87 @@
+header.header.header--main 
+  .container 
+    .header__inner 
+      button(type="button" data-menu-btn="menu").header__burger
+        span 
+        span 
+        span 
+      .header__menu.menu(data-menu="menu")
+        .menu__inner
+          .menu__content
+            nav.menu__nav 
+              ul.menu__nav-list 
+                li.menu__nav-item.is-current
+                  a(href="#") Главная 
+                li.menu__nav-item.menu-dropdown(data-menu-dropdown="item") 
+                  a(href="#" data-menu-dropdown="btn").menu-dropdown__item
+                    span Все развлечения
+                    +svg(10, 10, "chevron-down")
+                  ul.menu-dropdown__list(data-menu-dropdown="list")
+                    li.menu-dropdown__list-item 
+                      a(href="#") Веревочный парк
+                    li.menu-dropdown__list-item 
+                      a(href="#") Спортивный скалодром
+                    li.menu-dropdown__list-item 
+                      a(href="#") Виа Феррата
+                    li.menu-dropdown__list-item 
+                      a(href="#") Активити зона
+                    li.menu-dropdown__list-item 
+                      a(href="#") Троллей
+                    li.menu-dropdown__list-item 
+                      a(href="#") Сеточный лабиринт
+                    li.menu-dropdown__list-item 
+                      a(href="#") Прыжок с крыла самолета
+                    li.menu-dropdown__list-item 
+                      a(href="#") Праздники для взрослых
+                    li.menu-dropdown__list-item 
+                      a(href="#") Секции
+                    li.menu-dropdown__list-item 
+                      a(href="#") Спортшкола
+                    li.menu-dropdown__list-item 
+                      a(href="#") Кафе
+                li.menu__nav-item 
+                  a(href="#") Цены
+                li.menu__nav-item 
+                  a(href="#") Расписание
+                li.menu__nav-item 
+                  a(href="#") Акции
+                li.menu__nav-item.menu-dropdown(data-menu-dropdown="item") 
+                  a(href="#" data-menu-dropdown="btn").menu-dropdown__item
+                    span О нас
+                    +svg(10, 10, "chevron-down")
+                  ul.menu-dropdown__list(data-menu-dropdown="list")
+                    li.menu-dropdown__list-item 
+                      a(href="#") О комплексе
+                    li.menu-dropdown__list-item 
+                      a(href="#") Новости
+                    li.menu-dropdown__list-item 
+                      a(href="#") Отзывы
+                    li.menu-dropdown__list-item 
+                      a(href="#") Фотогалерея
+                    li.menu-dropdown__list-item 
+                      a(href="#") Галерея роликов
+            .menu__contacts
+              a(href="tel:+78123356555").menu__tel +7 (812) 335-65-55
+            .menu__bottom
+              .menu__action
+                a(href="#").menu__soc-link.btn.btn_white.btn_m.btn_wide 
+                  +svg(20, 20, "tg")
+                  span @HighEnergy_bot
+                a(href="#").menu__soc-link.btn.btn_white.btn_m.btn_wide 
+                  +svg(20, 20, "vk")
+                  span vk.com/highenergyspb
+                a(href="#").menu__btn.btn.btn_wide
+                  span Купить билет
+                  +svg(24, 24, "tickets") 
+      .header__toolbar 
+        a(href="tel:+78123356555").header__tel +7 (812) 335-65-55
+        .header__actions
+          .header__socials
+            .socials 
+              a(href="#").socials__item 
+                +svg(20, 20, "tg")
+              a(href="#").socials__item 
+                +svg(20, 20, "vk")
+          button.header__btn.btn.btn_gradient
+            span Купить билет
+            +svg(24, 24, "tickets")

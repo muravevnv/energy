@@ -24,6 +24,13 @@
   flex-direction: column;
   align-items: flex-start;
 
+  @include mq-hover {
+
+    .promo-card__title {
+      color: var(--color-accent);
+    }
+  }
+
   &__img {
     display: block;
     width: 100%;
@@ -60,5 +67,6 @@
     font-size: 22px;
     line-height: 1.37;
     font-weight: 600;
+    transition: color 0.3s ease;
   }
 }

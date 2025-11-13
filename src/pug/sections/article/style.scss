@@ -62,17 +62,17 @@
       border: 1px solid var(--color-blck-50);
       overflow: hidden;
 
-      &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(0deg, rgba(13, 13, 13, 0.5) 40%, rgba(13, 13, 13, 0) 100%);
-        z-index: 0;
-        border-radius: 32px;
-      }
+      // &::before {
+      //   content: '';
+      //   width: 100%;
+      //   height: 100%;
+      //   display: block;
+      //   position: absolute;
+      //   inset: 0;
+      //   background: linear-gradient(0deg, rgba(13, 13, 13, 0.5) 40%, rgba(13, 13, 13, 0) 100%);
+      //   z-index: 0;
+      //   border-radius: 32px;
+      // }
 
       &::after {
         content: '';

@@ -12,7 +12,7 @@ header.header
           .menu__content
             nav.menu__nav 
               ul.menu__nav-list 
-                li.menu__nav-item 
+                li.menu__nav-item.is-current
                   a(href="#") Главная 
                 li.menu__nav-item.menu-dropdown(data-menu-dropdown="item") 
                   a(href="#" data-menu-dropdown="btn").menu-dropdown__item
@@ -47,8 +47,6 @@ header.header
                   a(href="#") Расписание
                 li.menu__nav-item 
                   a(href="#") Акции
-                li.menu__nav-item 
-                  a(href="#") Новости
                 li.menu__nav-item.menu-dropdown(data-menu-dropdown="item") 
                   a(href="#" data-menu-dropdown="btn").menu-dropdown__item
                     span О нас
@@ -56,6 +54,8 @@ header.header
                   ul.menu-dropdown__list(data-menu-dropdown="list")
                     li.menu-dropdown__list-item 
                       a(href="#") О комплексе
+                    li.menu-dropdown__list-item 
+                      a(href="#") Новости
                     li.menu-dropdown__list-item 
                       a(href="#") Отзывы
                     li.menu-dropdown__list-item 
@@ -84,6 +84,6 @@ header.header
                 +svg(20, 20, "tg")
               a(href="#").socials__item 
                 +svg(20, 20, "vk")
-          button.header__btn.btn.btn 
+          button.header__btn.btn.btn_gradient 
             span Купить билет
             +svg(24, 24, "tickets")
