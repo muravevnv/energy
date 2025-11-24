@@ -30,6 +30,20 @@
     border-radius: var(--rounded-3xl);
   }
 
+  &:hover {
+    background-color: var(--color-accent-25);
+    box-shadow: 0px 4px 20px 0px #D6D5D54D;
+
+    .services-card__link {
+      transform: rotate(45deg);
+      color: var(--color-accent);
+    }
+  }
+
+  &__link {
+    transition: 0.3s ease;
+  }
+
   &__main {
     position: relative;
     width: 500px;
@@ -188,9 +202,9 @@
       }
 
       @media(max-width: 399px) {
-         max-width: 119px;
+        max-width: 119px;
       }
-      
+
       @include mq($xs) {
         font-size: 16px;
         max-width: 60px;

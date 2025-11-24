@@ -360,6 +360,15 @@
       }
     }
   }
+
+  &__pagination {
+    display: none;
+
+    @include mq($l) {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 .hero-item {

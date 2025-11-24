@@ -1,0 +1,26 @@
+.other-news {
+
+  &__slider {
+    overflow: hidden;
+
+    .blog-card__main {
+      height: 223px;
+
+      @include mq($xxl) {
+        height: 248px;
+      }
+
+      @include mq($xl) {
+        height: 200px;
+      }
+
+      @include mq($l) {
+        height: 218px;
+      }
+
+      @include mq($s) {
+        height: 228px;
+      }
+    }
+  }
+}

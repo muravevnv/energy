@@ -208,5 +208,10 @@
     font-size: 18px;
     line-height: 1.56;
     font-family: var(--font-secondary);
+    transition: 0.3s ease;
+
+    @include mq-hover {
+      color: var(--color-accent);
+    }
   }
 }

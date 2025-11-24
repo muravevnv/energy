@@ -191,11 +191,10 @@ section.service.section-top
                   li Для активного отдыха в верёвочном парке рекомендуем взять с собой удобную спортивную одежду и обувь. Также вы можете взять в аренду кеды, обратившись на стойку ресепшен
                   li Сопровождающим тоже необходимо иметь сменную обувь, в случае ее отсутствия можно воспользоваться бахилами
         .service__sidebar
-          .service__mascot 
-            img(src="./img/decor/rokki.svg", alt="")
           .service__gallery
             .service__gallery-title.h3 Фотогалерея
-            .service__gallery-photos 
+            a(href="#").service__gallery-photos 
+              button.service__gallery-btn.btn.btn_gradient Смотреть галерею
               .service__gallery-stack
                 picture.service__gallery-photo 
                   img(src="./img/service/side-01.png", alt="Фото 1")
@@ -216,7 +215,7 @@ section.service.section-top
               .service__banner-price-title Стоимость посещения:
               .service__banner-price-summ от 99 999 руб.
             .service__banner-actions 
-              button(type="button").btn.btn_l.btn_wide
+              button(type="button").btn.btn_gradient.btn_l.btn_wide
                 span Купить билет
                 +svg(28, 28, 'tickets')
               a(href="#").btn.btn_l.btn_wide.btn_outline Подарочный сертификат

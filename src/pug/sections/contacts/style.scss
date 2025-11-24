@@ -44,12 +44,10 @@
   }
 
   &__title {
-    padding: 19px 35px;
+    padding: 20px 36px;
     font-size: 48px;
     font-weight: 500;
     line-height: 1;
-    border: 1px solid var(--color-white);
-    border-radius: 60px;
 
     @include mq($l) {
       font-size: 30px;
@@ -215,8 +213,6 @@
     font-size: 48px;
     font-weight: 500;
     line-height: 1;
-    border: 1px solid var(--color-accent-600);
-    border-radius: 60px;
 
     @include mq($l) {
       font-size: 30px;

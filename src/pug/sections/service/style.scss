@@ -200,6 +200,7 @@
   }
 
   &__gallery {
+    position: relative;
     max-width: 600px;
 
     @include mq($xl) {
@@ -208,6 +209,25 @@
 
     @include mq($l) {
       max-width: 100%;
+    }
+
+    @include mq-hover {
+
+      .service__gallery-btn {
+        opacity: 1;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      min-width: 225px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
     }
 
     &-title {
@@ -273,6 +293,7 @@
     padding: 48px;
     border-radius: var(--rounded-xl);
     background-color: var(--color-blck-25);
+    z-index: 1;
 
     @include mq($xl) {
       width: 100%;
@@ -290,7 +311,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      z-index: 0;
+      z-index: -1;
     }
 
     &-title {
@@ -354,6 +375,11 @@
 
       @include mq($l) {
         flex-direction: column;
+
+        .btn {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
       }
     }
   }
@@ -991,9 +1017,18 @@
       background-color: #F38DB8;
     }
 
-    .schedule-card__info,
     .schedule-card__bottom {
       background-color: #D95D98;
+    }
+
+    .schedule-card__info {
+      background-color: #E675A8;
+
+      @include mq-hover {
+        &:hover {
+          background-color: #D95D98;
+        }
+      }
     }
   }
 
@@ -1004,10 +1039,18 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #F08518;
+    background-color: var(--color-accent);
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+
+    @include mq-hover {
+      &:hover {
+        background-color: var(--color-accent-600);
+      }
+    }
   }
 
   &__inner {
@@ -1049,10 +1092,27 @@
 
 .sv-levels {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
+
+  &__inner {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    &.is-visible {
+      display: flex;
+
+      +.sv-levels__bottom {
+        margin-top: 24px;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
 
   &__section {
     width: 100%;
@@ -1105,7 +1165,7 @@
         width: 100%;
       }
 
-      + .sv-levels__track-info {
+      +.sv-levels__track-info {
         @include mq($m) {
           padding: 12px 20px 20px 20px;
         }
@@ -1171,7 +1231,9 @@
       }
 
       @include mq($m) {
-        gap: 20px 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
       }
     }
 
@@ -1234,6 +1296,106 @@
           }
         }
       }
+    }
+  }
+}
+
+.sv-anim-programs {
+  width: 100%;
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.56;
+    margin-bottom: 36px;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include mq($m) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    background-color: var(--color-blck-25);
+    border-radius: var(--rounded-3xl);
+    min-height: 240px;
+    overflow: hidden;
+
+    @include mq($s) {
+      flex-direction: column;
+    }
+
+    &-img {
+      display: block;
+      width: 38%;
+      border-radius: var(--rounded-3xl);
+      overflow: hidden;
+
+      @include mq($s)  {
+        width: 100%;
+        height: 220px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include mq($s)  {
+          object-position: top;
+        }
+      }
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 600;
+      margin-bottom: 12px;
+
+      span {
+        padding: 4px 12px;
+        background-color: var(--color-white);
+        color: var(--font-secondary);
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+        border-radius: var(--rounded-3xl);
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      width: 62%;
+      padding: 24px;
+
+      @include mq($s)  {
+        width: 100%;
+        padding: 20px 20px 24px;
+      }
+    }
+
+    &-desc {
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--color-blck-500);
+      margin-bottom: 24px;
+    }
+
+    &-btn {
+      margin-top: auto;
     }
   }
 }

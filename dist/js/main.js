@@ -247,6 +247,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  if (document.querySelector('[data-slider="other-news"]')) {
+    new Swiper('[data-slider="other-news"]', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 800,
+      breakpoints: {
+        559: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        1399: {
+          slidesPerView: 4,
+        },
+      },
+      scrollbar: {
+        el: '[data-slider-scrollbar="other-news"]',
+        draggable: true,
+      },
+    });
+  }
+
   if (document.querySelector('[data-slider="schedule-slider"]')) {
     new Swiper('[data-slider="schedule-slider"]', {
       slidesPerView: 1,
@@ -269,6 +292,83 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
+
+  function initScrollToTop() {
+    const scrollToTop = document.querySelector('[data-scroll-btn="top"]');
+
+    if (scrollToTop) {
+      document.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          scrollToTop.classList.add("is-visible");
+        } else {
+          scrollToTop.classList.remove("is-visible");
+        }
+      });
+
+      scrollToTop.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+  }
+
+  initScrollToTop();
+
+  function showHiddenContent() {
+    const btns = document.querySelectorAll("[data-h-content-btn]");
+
+    btns.forEach((btn) => {
+      const dataId = btn.getAttribute("data-h-content-btn");
+      const hiddenText = btn.getAttribute("data-hidden-text");
+      const visibleTextBtn = btn.getAttribute("data-visibile-text");
+      const content = document.querySelector(`[data-h-content="${dataId}"]`);
+
+      btn.addEventListener("click", function () {
+        if (this.classList.contains("is-active")) {
+          this.classList.remove("is-active");
+          this.textContent = visibleTextBtn;
+          content.classList.remove("is-visible");
+        } else {
+          this.classList.add("is-active");
+          this.textContent = hiddenText;
+          content.classList.add("is-visible");
+        }
+      });
+    });
+  }
+
+  showHiddenContent();
+
+  function initAccordion() {
+    const heads = document.querySelectorAll('[data-acc="head"]');
+
+    heads.forEach((head) => {
+      head.addEventListener("click", function () {
+        const body = this.nextElementSibling;
+
+        // Закрываем все открытые секции
+        document.querySelectorAll('[data-acc="body"]').forEach((item) => {
+          if (item !== body) {
+            item.style.maxHeight = "0";
+          }
+        });
+
+        // Переключаем текущую секцию
+        if (body.style.maxHeight && body.style.maxHeight !== "0px") {
+          body.style.maxHeight = "0";
+          head.classList.remove("is-active");
+        } else {
+          body.style.maxHeight = body.scrollHeight + "px";
+          head.classList.add("is-active");
+        }
+      });
+    });
+  }
+
+  initAccordion();
 
   function initTabs(container) {
     const buttons = container.querySelectorAll("[data-tab]");
@@ -325,9 +425,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $("[data-fancybox]").fancybox({
     touch: false,
-    buttons: [
-      "close",
-    ],
+    buttons: ["close"],
     animationEffect: "fade",
     transitionEffect: "fade",
   });
@@ -339,17 +437,38 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 800,
         centeredSlides: true,
         initialSlide: 1,
+        slideToClickedSlide: true,
         breakpoints: {
           992: {
             slidesPerView: 3,
           },
         },
-      
+
         navigation: {
           nextEl: '[data-slider-next="shorts-slider"]',
           prevEl: '[data-slider-prev="shorts-slider"]',
         },
       });
+    }
+
+    const videoBlocks = document.querySelectorAll('[data-video]');
+    
+    if(videoBlocks) {
+      videoBlocks.forEach((block) => {
+        const playBtn = block.querySelector('[data-video-play]');
+        // const pauseBtn = block.querySelector('[data-video-pause]');
+        const player = block.querySelector('[data-video-player]');
+
+        playBtn.addEventListener("click", function () {
+          block.classList.add("is-playing");
+          player.play();
+        })
+
+        // pauseBtn.addEventListener("click", function () {
+        //   block.classList.add("is-pausing");
+        //   player.pause();
+        // })
+      })
     }
   };
 });

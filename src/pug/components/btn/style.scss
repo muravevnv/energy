@@ -52,8 +52,9 @@
     color: var(--color-blck);
 
     @include mq-hover {
-      background: var(--color-secondary-500);
-      color: var(--color-white);
+      background: var(--color-secondary-200);
+      border-color: var(--color-secondary-200);
+      color: var(--color-blck);
     }
   }
 

@@ -42,6 +42,17 @@
   flex-direction: column;
   border-radius: 48px;
   background-color: var(--color-grey-light);
+  transition: 0.3s ease;
+
+  @include mq-hover {
+    background-color: var(--color-accent-25);
+    box-shadow: 0px 4px 20px 0px #D6D5D54D;
+
+    .service-card__link {
+      transform: rotate(45deg);
+      color: var(--color-accent);
+    }
+  }
 
   &__main {
     position: relative;
@@ -110,5 +121,9 @@
     font-family: var(--font-secondary);
     font-size: 20px;
     line-height: 1.5;
+  }
+
+  &__link {
+    transition: 0.3s ease;
   }
 }

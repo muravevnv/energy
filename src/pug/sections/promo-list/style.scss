@@ -1,5 +1,10 @@
 .promo-group {
   padding-bottom: 60px;
+  
+  &:not(:last-child) {
+    margin-bottom: 60px;
+    border-bottom: 1px solid var(--color-blck-50);
+  }
 
   &__title {
     font-size: 30px;

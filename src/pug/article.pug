@@ -11,8 +11,9 @@ html(lang="en")
     
     include components/header/index
     main 
-      +breadcrumbs(['Главная', 'Новости', 'Обновление локации'])
+      +breadcrumbs(['Главная', 'О нас', 'Новости', 'Название статьи'])
       include sections/article/index
+      include sections/other-news/index
       include sections/sertificat/index
       include sections/advantages/index
     include components/footer/index

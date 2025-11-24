@@ -25,20 +25,20 @@ section.services.section-top
       for item in services
         .services-card
           .services-card__main
-            picture.services-card__img 
+            a(href="#").services-card__img 
               img(src=`./img/services/service-${item.img}.png`, alt=`${item.title}`)
             .services-card__details
               .tags
                 for detail in item.details
-                  .tag= detail
+                  a(href="#").tag= detail
           .services-card__info
-            .services-card__title= item.title
+            a(href="#").services-card__title= item.title
             .services-card__desc= item.desc
             .services-card__bottom 
               .services-card__tags
                 .tags 
                   for tag in item.tags
-                    .tag= tag
+                    a(href="#").tag= tag
               .services-card__action 
                 button(type="button").services-card__add-ticket  
                   span Купить билет

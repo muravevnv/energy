@@ -26,6 +26,17 @@
   flex-direction: column;
   border-radius: 48px;
   background-color: var(--color-grey-light);
+  transition: 0.25s ease;
+
+  @include mq-hover {
+    background-color: var(--color-accent-25);
+    box-shadow: 0px 4px 20px 0px #D6D5D54D;
+
+    .park-zones-card__link {
+      transform: rotate(45deg);
+      color: var(--color-accent);
+    }
+  }
 
   &__main {
     position: relative;
@@ -142,5 +153,6 @@
 
   &__link {
     flex-shrink: 0;
+    transition: 0.25s ease;
   }
 }

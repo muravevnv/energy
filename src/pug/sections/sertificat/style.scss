@@ -9,6 +9,7 @@
     @include mq($xl) {
       flex-direction: column;
       margin-bottom: 36px;
+      text-align: center;
     }
   }
 

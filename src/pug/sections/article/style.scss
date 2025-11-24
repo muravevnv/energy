@@ -58,9 +58,9 @@
       display: block;
       width: 100%;
       padding: 15px;
-      border-radius: 32px;
-      border: 1px solid var(--color-blck-50);
+      border-radius: var(--rounded-5xl);
       overflow: hidden;
+      box-shadow: 0px 4px 20px 0px #D6D5D54D;
 
       // &::before {
       //   content: '';
@@ -84,13 +84,12 @@
         border: 15px solid var(--color-white);
         inset: 0;
         z-index: 1;
-        border-radius: 32px;
       }
 
       img {
         display: block;
         width: 100%;
-        border-radius: 24px;
+        border-radius: var(--rounded-3xl);
       }
     }
 

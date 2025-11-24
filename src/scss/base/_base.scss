@@ -79,13 +79,18 @@ body {
     animation: rotate 4s linear infinite;
   }
 
+  svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+
   @include mq($l) {
     padding: 36px 0;
 
     svg {
-      display: block;
-      width: 36px;
-      height: 36px;
+      width: 24px;
+      height: 24px;
     }
   }
 }
