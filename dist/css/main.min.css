@@ -3412,6 +3412,16 @@ body {
   }
 }
 
+.section-bottom {
+  display: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .section-bottom {
+    display: block;
+    padding-top: 24px;
+  }
+}
+
 .common-slider-scrollbar {
   margin-top: 24px;
   padding: 8px 16px;

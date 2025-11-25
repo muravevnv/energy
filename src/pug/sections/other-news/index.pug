@@ -1,6 +1,6 @@
 .other-news
   .container
-    +section-heading('Кроме билетов', false)
+    +section-heading('Другие новости', 'Все новости')
     .other-news__slider(data-slider="other-news")
       .swiper-wrapper 
         .swiper-slide 
@@ -71,3 +71,5 @@
               .blog-card__desc Текст новости, превью в три строки, сделать ограничение, если текст будет длиннее, чем три строки, если будет четвертая строка, то её надо скрыть срочно обморочно...
       .common-slider-scrollbar
         .swiper-scrollbar(data-slider-scrollbar="other-news")
+    .section-bottom   
+      a(href="#").btn.btn_wide.btn_gradient Все новости 
