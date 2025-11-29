@@ -56,6 +56,25 @@ body {
   }
 }
 
+.section-w-decor {
+  position: relative;
+  z-index: 1;
+}
+
+.section-decor-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: -1;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
 .section-top {
   padding: 20px 0 40px;
 }
@@ -65,6 +84,10 @@ body {
 
   @include mq($l) {
     padding-bottom: 32px;
+  }
+
+  .h1 {
+    max-width: 1200px;
   }
 }
 

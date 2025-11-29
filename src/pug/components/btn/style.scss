@@ -81,7 +81,7 @@
       background: linear-gradient(90deg, #F59F0D, #F08518),
         linear-gradient(90deg, rgba(240, 133, 24, 0) 0%, #F08518 100%);
       border-radius: inherit;
-      z-index: -1;
+      z-index: -2;
       transition: 0.3s ease;
     }
 
@@ -90,10 +90,6 @@
 
       &::after {
         opacity: 1;
-      }
-
-      &::before {
-        opacity: 0;
       }
     }
   }

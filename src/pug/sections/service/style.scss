@@ -213,6 +213,27 @@
 
     @include mq-hover {
 
+      .service__gallery-photo {
+
+        &:nth-of-type(odd) {
+          img {
+            transform: rotate(-3deg);
+          }
+        }
+
+        &:nth-of-type(even) {
+          img {
+            transform: rotate(3deg);
+          }
+        }
+
+        &:last-child {
+          img {
+            transform: rotate(5deg);
+          }
+        }
+      }
+
       .service__gallery-btn {
         opacity: 1;
       }
@@ -224,7 +245,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 5;
-      min-width: 225px;
+      min-width: 240px;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s ease;
@@ -253,13 +274,13 @@
     &-photo {
       display: block;
       width: 100%;
-      border-radius: 36px;
-      overflow: hidden;
-
 
       img {
         display: block;
         width: 100%;
+        transition: transform 0.3s ease;
+        border-radius: 36px;
+        box-shadow: 0 0px 20px 2px #00000033;
       }
 
       &:not(:last-child) {
@@ -273,17 +294,15 @@
       &:last-child {
         position: relative;
         z-index: 2;
-        box-shadow: 0 0px 20px 2px #00000033;
+        
       }
 
       &:nth-of-type(1) {
         transform: translate(-50%, -50%) rotate(6deg);
-        box-shadow: 0 0px 20px 2px #00000033;
       }
 
       &:nth-of-type(3) {
         transform: translate(-50%, -50%) rotate(-4deg);
-        box-shadow: 0 0px 20px 2px #00000033;
       }
     }
   }
@@ -1338,7 +1357,7 @@
       border-radius: var(--rounded-3xl);
       overflow: hidden;
 
-      @include mq($s)  {
+      @include mq($s) {
         width: 100%;
         height: 220px;
       }
@@ -1349,7 +1368,7 @@
         height: 100%;
         object-fit: cover;
 
-        @include mq($s)  {
+        @include mq($s) {
           object-position: top;
         }
       }
@@ -1381,7 +1400,7 @@
       width: 62%;
       padding: 24px;
 
-      @include mq($s)  {
+      @include mq($s) {
         width: 100%;
         padding: 20px 20px 24px;
       }

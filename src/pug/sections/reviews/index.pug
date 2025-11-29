@@ -1,72 +1,171 @@
--
-  var reviews = [
-    {
-      date: '21.02.2025',
-      desc: 'Отличное место! Рекомендую',
-      stars: 5,
-      author: 'Алиса В.'
-    },
-    {
-      date: '21.02.2025',
-      desc: 'Отличное место! Рекомендую',
-      stars: 5,
-      author: 'Алиса В.'
-    },
-    {
-      date: '27.02.2025',
-      desc: 'Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей и всем, кто любит активный вид отдыха. Уехали уставшие, но c отличным настроением.',
-      stars: 5,
-      author: 'Михаил К.'
-    },
-    {
-      date: '03.03.2025',
-      desc: 'Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей и всем, кто любит активный вид отдыха.',
-      stars: 5,
-      author: 'Павел Р.'
-    },
-    {
-      date: '06.03.2025',
-      desc: 'Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей и всем, кто любит спорт на свежем воздухе. ',
-      stars: 5,
-      author: 'Алла С.'
-    },
-  ]
-
-section.reviews.section   
+section.reviews.section-top.section-w-decor
+  picture.section-decor-img 
+    img(src="./img/decor/mountains.svg", alt="")
   .container 
-    +section-heading('Ваше мнение о нас', 'Все отзывы')
-    .reviews__slider(data-slider="reviews")
-      .swiper-wrapper 
-        for item in reviews
-          .swiper-slide 
-            .reviews-card
-              .reviews-card__top
-                .reviews-card__main
-                  .reviews-card__author= item.author
-                  .reviews-card__rating 
-                    .reviews-card__stars
-                      .reviews-card__star.is-highlighted 
-                        +svg(20, 20, 'star')
-                      .reviews-card__star.is-highlighted 
-                        +svg(20, 20, 'star')
-                      .reviews-card__star.is-highlighted 
-                        +svg(20, 20, 'star')
-                      .reviews-card__star 
-                        +svg(20, 20, 'star')
-                      .reviews-card__star 
-                        +svg(20, 20, 'star')
-                .reviews-card__date= item.date
-              .reviews-card__desc= item.desc
-              .reviews-card__bottom 
-                a(href="#").reviews-card__more Читать отзыв 
-      .common-slider-scrollbar
-        .swiper-scrollbar(data-slider-scrollbar="reviews")
-      .common-slider-buttons 
-        button(type="button" data-slider-prev="reviews").common-slider-btn 
-          +svg(24, 24, 'arrow-left')
-        button(type="button" data-slider-next="reviews").common-slider-btn 
-          +svg(24, 24, 'arrow-right')
-      .reviews__bottom 
-        a(href="#").btn.btn_wide Все отзывы
-    picture.reviews__bg 
-      img(src="./img/reviews/bg.svg", alt="")
+    .heading 
+      h1.h1 Отзывы
+    .reviews__list 
+      .reviews-item
+        .reviews-item__top 
+          .reviews-item__name Михаил К.
+          .reviews-item__stars 
+            .rating-stars 
+              .rating-star.is-highlighted
+                +svg(20, 20, 'star')
+              .rating-star.is-highlighted
+                +svg(20, 20, 'star')
+              .rating-star.is-highlighted
+                +svg(20, 20, 'star')
+              .rating-star.is-highlighted
+                +svg(20, 20, 'star')
+              .rating-star.is-highlighted
+                +svg(20, 20, 'star')
+          .reviews-item__date 27.02.2025
+        .reviews-item__desc 
+          | Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей 
+          | и всем, кто любит активный вид отдыха. Уехали уставшие, но c от... Отличное место 
+          | для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей и всем, 
+          | кто любит активный вид отдыха. Уехали уставшие, но c отличным настроением!
+          | Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей 
+          | и всем, кто любит активный вид отдыха. Уехали уставшие, но c от... Отличное место для 
+          | выходного дня. Рекомендую семьям с детьми от 5 лет, компаниям друзей и всем, 
+          | кто любит активный вид отдыха. Уехали уставшие, но c от... 
+          | Уехали уставшие, но c от... Отличное место для выходного дня. Рекомендую семьям 
+          | с детьми от 5 лет, компаниям друзей и всем, кто любит активный вид отдыха. 
+          | Уехали уставшие, но c отличным настроением!
+        .reviews-item__media 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+      .reviews-item
+        .reviews-item__top 
+          .reviews-item__name Михаил К.
+          .reviews-item__stars 
+            .rating-stars 
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+          .reviews-item__date 27.02.2025
+        .reviews-item__desc 
+          | Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, 
+          | компаниям друзей и всем, кто любит активный вид отдыха. Уехали уставшие, но счастливые
+      .reviews-item
+        .reviews-item__top 
+          .reviews-item__name Михаил К.
+          .reviews-item__stars 
+            .rating-stars 
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+          .reviews-item__date 27.02.2025
+        .reviews-item__desc 
+          | Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, 
+          | компаниям друзей и всем, кто любит активный вид отдыха. Уехали уставшие, 
+          | но c от... Отличное место для выходного дня. Рекомендую семьям с детьми 
+          | от 5 лет, компаниям друзей и всем, кто любит активный вид отдыха. Уехали уставшие, но c отличным настроением!
+        .reviews-item__media 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+      .reviews-item
+        .reviews-item__top 
+          .reviews-item__name Оченьдлинное Имяюзерануоченьдлинное
+          .reviews-item__stars 
+            .rating-stars 
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+              .rating-star
+                +svg(20, 20, 'star')
+          .reviews-item__date 27.02.2025
+        .reviews-item__desc 
+          | Отличное место для выходного дня. Рекомендую семьям с детьми от 5 лет, 
+          | компаниям друзей и всем, кто любит активный вид отдыха. Уехали уставшие, 
+          | но c от... Отличное место для выходного дня. Рекомендую семьям с детьми 
+          | от 5 лет, компаниям друзей и всем, кто любит активный вид отдыха. Уехали уставшие, но c отличным настроением!
+        .reviews-item__media 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 
+          a(href="#").reviews-item__media-item.reviews-item__media-item--video
+            picture.reviews-item__media-preview 
+              img(src="./img/reviews/preview.jpg", alt="") 

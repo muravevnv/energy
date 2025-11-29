@@ -430,6 +430,11 @@ document.addEventListener("DOMContentLoaded", function () {
     transitionEffect: "fade",
   });
 
+  $(".grid").masonry({
+    itemSelector: ".grid-item",
+    gutter: 24,
+  });
+
   $.fancybox.defaults.afterShow = function (instance, current) {
     if (document.querySelector('[data-slider="shorts-slider"]')) {
       new Swiper('[data-slider="shorts-slider"]', {
@@ -449,26 +454,53 @@ document.addEventListener("DOMContentLoaded", function () {
           prevEl: '[data-slider-prev="shorts-slider"]',
         },
       });
+
+      const videoBlocks = document.querySelectorAll("[data-video]");
+
+      if (videoBlocks) {
+        videoBlocks.forEach((block) => {
+          const playBtn = block.querySelector("[data-video-play]");
+          // const pauseBtn = block.querySelector('[data-video-pause]');
+          const player = block.querySelector("[data-video-player]");
+
+          playBtn.addEventListener("click", function () {
+            block.classList.add("is-playing");
+            player.play();
+          });
+
+          // pauseBtn.addEventListener("click", function () {
+          //   block.classList.add("is-pausing");
+          //   player.pause();
+          // })
+        });
+      }
     }
 
-    const videoBlocks = document.querySelectorAll('[data-video]');
-    
-    if(videoBlocks) {
-      videoBlocks.forEach((block) => {
-        const playBtn = block.querySelector('[data-video-play]');
-        // const pauseBtn = block.querySelector('[data-video-pause]');
-        const player = block.querySelector('[data-video-player]');
+    if (document.querySelector('[data-slider="photos-slider"]')) {
+      const photosThumbs = new Swiper('[data-slider="photos-thumbs"]', {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        speed: 800,
+        scrollbar: {
+          el: '[data-slider-scrollbar="photos-thumbs"]',
+          draggable: true,
+        },
+      });
 
-        playBtn.addEventListener("click", function () {
-          block.classList.add("is-playing");
-          player.play();
-        })
-
-        // pauseBtn.addEventListener("click", function () {
-        //   block.classList.add("is-pausing");
-        //   player.pause();
-        // })
-      })
+      const photosSlider = new Swiper('[data-slider="photos-slider"]', {
+        slidesPerView: 1,
+        autoHeight: true,
+        speed: 800,
+        spaceBetween: 16,
+        breakpoints: {
+          992: {
+            autoHeight: false,
+          },
+        },
+        thumbs: {
+          swiper: photosThumbs,
+        },
+      });
     }
   };
 });
