@@ -274,9 +274,10 @@
             <div class="s-about__head-desc">увлекательных приключений и&nbsp;спорта</div>
           </div>
           <div class="s-about__video"> 
-            <div class="videoplayer">
-              <video class="videoplayer__frame" src="" poster="./img/about/preview.png"></video>
-              <button class="videoplayer__btn btn-play" type="button">
+            <div class="videoplayer" data-video>
+              <picture class="videoplayer__preview"> <img src="./img/about/preview.png" alt=""></picture>
+              <video class="videoplayer__frame" src="https://media.istockphoto.com/id/2157626194/video/full-frame-of-bright-green-and-golden-wave-filmed-at-sunrise-while-swimming-in-the-ocean.mp4?s=mp4-640x640-is&amp;k=20&amp;c=okvsc4Z_KRkj_W1sXIdqzQ1MOX1DUzkDoWI1SquZSrg=" data-video-player playsinline controls></video>
+              <button class="videoplayer__btn btn-play" type="button" data-video-play>
                 <svg width="36" height="36"> 
                   <use xlink:href="./img/sprite.svg#play-arrow"></use>
                 </svg>

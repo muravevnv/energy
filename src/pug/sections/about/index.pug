@@ -4,9 +4,11 @@ section.s-about.section
       .s-about__head-main 6000&nbsp;м2 
       .s-about__head-desc увлекательных приключений и&nbsp;спорта
     .s-about__video 
-      .videoplayer
-        video(src="" poster="./img/about/preview.png").videoplayer__frame
-        button(type="button").videoplayer__btn.btn-play
+      .videoplayer(data-video)
+        picture.videoplayer__preview 
+          img(src="./img/about/preview.png", alt="")
+        video(src="https://media.istockphoto.com/id/2157626194/video/full-frame-of-bright-green-and-golden-wave-filmed-at-sunrise-while-swimming-in-the-ocean.mp4?s=mp4-640x640-is&k=20&c=okvsc4Z_KRkj_W1sXIdqzQ1MOX1DUzkDoWI1SquZSrg=" data-video-player playsinline controls).videoplayer__frame
+        button(type="button" data-video-play).videoplayer__btn.btn-play
           +svg(36, 36, 'play-arrow')
     picture.s-about__bg 
       img(src="./img/about/bg.svg", alt="")

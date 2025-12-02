@@ -901,6 +901,20 @@
   }
 }
 
+.sv-tabs-content {
+  width: 100%;
+
+  &__block {
+    display: none;
+
+    &.is-active {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+  }
+}
+
 .sv-tabs {
   width: 100%;
 

@@ -143,10 +143,6 @@
 
   @include mq-hover {
     color: var(--color-accent);
-    
-    svg {
-      transform: rotate(45deg);
-    }
   }
 
   &_m {

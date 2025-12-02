@@ -423,6 +423,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function initVideoPlayer() {
+    const videoBlocks = document.querySelectorAll("[data-video]");
+
+    if (videoBlocks) {
+      videoBlocks.forEach((block) => {
+        const playBtn = block.querySelector("[data-video-play]");
+        const player = block.querySelector("[data-video-player]");
+
+        playBtn.addEventListener("click", function () {
+          block.classList.add("is-playing");
+          player.play();
+        });
+      });
+    }
+  }
+
+  initVideoPlayer();
+
   $("[data-fancybox]").fancybox({
     touch: false,
     buttons: ["close"],
@@ -435,49 +453,41 @@ document.addEventListener("DOMContentLoaded", function () {
     gutter: 24,
   });
 
-  $.fancybox.defaults.afterShow = function (instance, current) {
+  // Глобальные переменные для хранения экземпляров слайдеров
+  let shortsSlider = null;
+  let photosSlider = null;
+  let photosThumbs = null;
+
+  $.fancybox.defaults.beforeShow = function (instance, current) {
+    const clickedElement = current.opts.$orig[0];
+
     if (document.querySelector('[data-slider="shorts-slider"]')) {
-      new Swiper('[data-slider="shorts-slider"]', {
+      shortsSlider = new Swiper('[data-slider="shorts-slider"]', {
         slidesPerView: 1,
         speed: 800,
         centeredSlides: true,
-        initialSlide: 1,
         slideToClickedSlide: true,
         breakpoints: {
           992: {
             slidesPerView: 3,
           },
         },
-
         navigation: {
           nextEl: '[data-slider-next="shorts-slider"]',
           prevEl: '[data-slider-prev="shorts-slider"]',
         },
       });
 
-      const videoBlocks = document.querySelectorAll("[data-video]");
-
-      if (videoBlocks) {
-        videoBlocks.forEach((block) => {
-          const playBtn = block.querySelector("[data-video-play]");
-          // const pauseBtn = block.querySelector('[data-video-pause]');
-          const player = block.querySelector("[data-video-player]");
-
-          playBtn.addEventListener("click", function () {
-            block.classList.add("is-playing");
-            player.play();
-          });
-
-          // pauseBtn.addEventListener("click", function () {
-          //   block.classList.add("is-pausing");
-          //   player.pause();
-          // })
-        });
+      if (clickedElement && clickedElement.hasAttribute("data-video-id")) {
+        const videoId = clickedElement.getAttribute("data-video-id");
+        console.log(videoId);
+        shortsSlider.slideTo(videoId, 0);
+        setTimeout(() => {}, 50);
       }
     }
 
     if (document.querySelector('[data-slider="photos-slider"]')) {
-      const photosThumbs = new Swiper('[data-slider="photos-thumbs"]', {
+      photosThumbs = new Swiper('[data-slider="photos-thumbs"]', {
         slidesPerView: "auto",
         spaceBetween: 16,
         speed: 800,
@@ -487,7 +497,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       });
 
-      const photosSlider = new Swiper('[data-slider="photos-slider"]', {
+      // Инициализируем основной слайдер
+      photosSlider = new Swiper('[data-slider="photos-slider"]', {
         slidesPerView: 1,
         autoHeight: true,
         speed: 800,
@@ -501,6 +512,12 @@ document.addEventListener("DOMContentLoaded", function () {
           swiper: photosThumbs,
         },
       });
+
+      if (clickedElement && clickedElement.hasAttribute("data-pic-id")) {
+        const videoId = clickedElement.getAttribute("data-pic-id");
+        console.log(videoId);
+        photosSlider.slideTo(videoId, 0);
+      }
     }
   };
 });
