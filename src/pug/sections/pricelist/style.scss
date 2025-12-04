@@ -120,6 +120,7 @@
   }
 
   &__section-table {
+    padding-bottom: 40px;
 
     @include mq($xxl) {
       width: calc(100% + 48px);

@@ -8085,6 +8085,9 @@ body {
   justify-content: center;
   margin-top: 24px;
 }
+.pricelist__section-table {
+  padding-bottom: 40px;
+}
 @media only screen and (max-width: 1439.98px) {
   .pricelist__section-table {
     width: calc(100% + 48px);
@@ -8603,4 +8606,84 @@ body {
   .trainer-tooltip__bottom .btn {
     order: 10;
   }
+}
+
+.discount {
+  width: 100%;
+  padding-top: 36px;
+  margin-top: 36px;
+  border-top: 1px solid var(--color-blck-50);
+}
+.discount__head {
+  font-family: var(--font-secondary);
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 36px;
+}
+.discount__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+}
+@media only screen and (max-width: 991.98px) {
+  .discount__inner {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.discount__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.discount__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.discount__item-sticker {
+  width: 60px;
+  padding: 4px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: var(--color-blck);
+  color: var(--color-white);
+  border-radius: 72px;
+  flex-shrink: 0;
+}
+.discount__item-desc {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 200;
+}
+.discount__item-desc span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-blck-500);
+  margin-top: 6px;
+}
+.discount__desc ul li {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.44;
+  font-weight: 300;
+  padding-left: 21px;
+}
+.discount__desc ul li span {
+  font-weight: 700;
+}
+.discount__desc ul li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: currentColor;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 8px;
 }
