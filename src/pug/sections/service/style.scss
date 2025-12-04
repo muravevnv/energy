@@ -907,7 +907,7 @@
   &__block {
     display: none;
 
-    &.is-active {
+    &.is-selected {
       display: flex;
       flex-direction: column;
       gap: 36px;
@@ -947,7 +947,7 @@
       background-color: var(--color-blck-50);
     }
 
-    &.is-active {
+    &.is-selected {
       background-color: var(--color-accent);
       color: var(--color-white);
     }

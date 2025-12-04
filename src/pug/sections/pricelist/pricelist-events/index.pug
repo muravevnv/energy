@@ -1,0 +1,193 @@
+.pricelist__section(data-tabs-panel="pricelist-events" data-id="pr")
+  .pricelist__section-inner(data-tabs data-id="pr-events")
+    .pricelist__section-nav 
+      button(type="button" data-tabs-control="pr-ev-hb" data-id="pr-events").pricelist__section-tab-btn.is-selected Занятие с тренером
+      button(type="button" data-tabs-control="pr-ev-graduation" data-id="pr-events").pricelist__section-tab-btn Посещение
+      button(type="button" data-tabs-control="pr-ev-more-services" data-id="pr-events").pricelist__section-tab-btn Прокат
+    .pricelist__section-blocks
+      .pricelist__section-block.is-selected(data-tabs-panel="pr-ev-hb" data-id="pr-events") 
+        .pricelist__section-item 
+          .pricelist__section-title День рождения в верёвочном парке
+          .pricelist__section-table 
+            .table.table--xl 
+              .table__head 
+                .table__head-cell
+                  .table__head-title.table__head-title--white направление
+                .table__head-cell
+                  .table__head-title инфо
+                .table__head-cell
+                  .table__head-title 1-5 гостей
+                .table__head-cell
+                  .table__head-title 6-10 гостей
+                .table__head-cell
+                  .table__head-title 11-15 гостей
+                .table__head-cell
+              .table__body 
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Пакет «Все приключения» (будни)
+                  .table__cell
+                    .table__text анимация 1 час + <br> все приключения 2 часа + <br> кают-компания 4 часа
+                  .table__cell
+                    .table__desc 
+                      b 21 800 ₽
+                  .table__cell
+                    .table__desc 
+                      b 27 800 ₽
+                  .table__cell
+                    .table__desc 
+                      b 40 800 ₽
+                  .table__cell 
+                    button(type="button").btn-icon.btn-icon_m.btn-icon_gradient 
+                      +svg(22, 22, 'tickets')
+        .pricelist__section-item 
+          .pricelist__section-title День рождения на скалодроме
+          .pricelist__section-table 
+            .table.table--md 
+              .table__head 
+                .table__head-cell
+                  .table__head-title.table__head-title--white кол-во человек
+                .table__head-cell
+                  .table__head-title будни
+                .table__head-cell
+                  .table__head-title выходные
+                .table__head-cell
+              .table__body 
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title 1-5
+                  .table__cell
+                    .table__desc 
+                      b 10 800 ₽
+                  .table__cell
+                    .table__desc 
+                      b 13 800 ₽
+                  .table__cell 
+                    button(type="button").btn-icon.btn-icon_m.btn-icon_gradient 
+                      +svg(22, 22, 'tickets')
+      .pricelist__section-block(data-tabs-panel="pr-ev-graduation" data-id="pr-events") 
+        .pricelist__section-item 
+          .pricelist__section-title Выпускной в верёвочном парке
+          .pricelist__section-table 
+            .table.table--xl 
+              .table__head 
+                .table__head-cell
+                  .table__head-title.table__head-title--white направление
+                .table__head-cell
+                  .table__head-title инфо
+                .table__head-cell
+                  .table__head-title 1-5 гостей
+                .table__head-cell
+                  .table__head-title 6-10 гостей
+                .table__head-cell
+                  .table__head-title 11-15 гостей
+                .table__head-cell
+              .table__body 
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Пакет «Все приключения» (будни)
+                  .table__cell
+                    .table__text анимация 1 час + <br> все приключения 2 часа + <br> кают-компания 4 часа
+                  .table__cell
+                    .table__desc 
+                      b 21 800 ₽
+                  .table__cell
+                    .table__desc 
+                      b 27 800 ₽
+                  .table__cell
+                    .table__desc 
+                      b 40 800 ₽
+                  .table__cell 
+                    button(type="button").btn-icon.btn-icon_m.btn-icon_gradient 
+                      +svg(22, 22, 'tickets')
+        .pricelist__section-item 
+          .pricelist__section-title Выпускной на скалодроме
+          .pricelist__section-table 
+            .table.table--md 
+              .table__head 
+                .table__head-cell
+                  .table__head-title.table__head-title--white кол-во человек
+                .table__head-cell
+                  .table__head-title будни
+                .table__head-cell
+                  .table__head-title выходные
+                .table__head-cell
+              .table__body 
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title 1-5
+                  .table__cell
+                    .table__desc 
+                      b 10 800 ₽
+                  .table__cell
+                    .table__desc 
+                      b 13 800 ₽
+                  .table__cell 
+                    button(type="button").btn-icon.btn-icon_m.btn-icon_gradient 
+                      +svg(22, 22, 'tickets')
+      .pricelist__section-block(data-tabs-panel="pr-ev-more-services" data-id="pr-events") 
+        .pricelist__section-item
+          .pricelist__section-table 
+            .table.table--sm
+              .table__head 
+                .table__head-cell
+                  .table__head-title.table__head-title--white товар/услуга
+                .table__head-cell
+                  .table__head-title инфо
+                .table__head-cell
+                  .table__head-title стоимость
+              .table__body 
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Браслет силиконовый
+                  .table__cell
+                    .table__desc 
+                  .table__cell
+                    .table__desc 
+                      b 100 ₽
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Браслет светоотражающий
+                  .table__cell
+                    .table__desc 
+                  .table__cell
+                    .table__desc 
+                      b 100 ₽
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Гелиевые шары
+                      .table__info-desc 20 штук
+                  .table__cell
+                    .table__desc 
+                  .table__cell
+                    .table__desc 
+                      b 100 ₽
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Пакет украшений (для компании до 20 персон)
+                      .table__info-desc Будние дни после 16-00, выходные/праздники
+                  .table__cell
+                    .table__text Гелиевые шары, одноразовая посуда, салфетки, скатерти, гирлянды и свечи для создания праздничного настроения
+                  .table__cell
+                    .table__desc 
+                      b 100 ₽
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Работа фотографа
+                      .table__info-desc 1 час
+                  .table__cell
+                    .table__desc 
+                  .table__cell
+                    .table__desc 
+                      b 100 ₽
+          .pricelist__section-bottom
+            a(href="#").btn.btn_gradient Заказать праздник!

@@ -23,13 +23,13 @@ section.service.section-top
                 .service__hero-detail-value от 10
                 .service__hero-detail-label человек
       .service__inner
-        .service__content(data-tabs)
+        .service__content(data-tabs data-id="sv-content")
           .sv-tabs 
             .sv-tabs__controls 
-              button(type="button" data-tab="kids-event-01").sv-tabs__control.is-active На скалодроме
-              button(type="button" data-tab="kids-event-02").sv-tabs__control В веревочном парке
+              button(type="button" data-tabs-control="kids-event-01" data-id="sv-content").sv-tabs__control.is-selected На скалодроме
+              button(type="button" data-tabs-control="kids-event-02" data-id="sv-content").sv-tabs__control В веревочном парке
           .sv-tabs-content
-            .sv-tabs-content__block.is-active(data-tab-content="kids-event-01") 
+            .sv-tabs-content__block.is-selected(data-tabs-panel="kids-event-01" data-id="sv-content") 
               .sv-block 
                 .sv-block__title Детский праздник на скалодроме
                 .sv-block__content 
@@ -358,7 +358,7 @@ section.service.section-top
                       li 
                         span Сопровождающим 
                         | тоже необходимо иметь сменную обувь, в случае ее отсутствия можно воспользоваться бахилами
-            .sv-tabs-content__block(data-tab-content="kids-event-02")
+            .sv-tabs-content__block(data-tabs-panel="kids-event-02" data-id="sv-content")
               .sv-block 
                 .sv-block__title Детский праздник в верёвочном парке
                 .sv-block__content 

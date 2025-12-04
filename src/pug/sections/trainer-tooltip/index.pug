@@ -1,0 +1,33 @@
+.tooltip-contents(style="display: none;")
+    .trainer-tooltip(id="trainer-01")
+      .trainer-tooltip__inner
+        button(type="button").trainer-tooltip__close
+        .trainer-tooltip__person 
+          picture.trainer-tooltip__person-img 
+            img(src="./img/trainer/img.png", alt="")
+          .trainer-tooltip__person-info 
+            .trainer-tooltip__person-name Пименова Людмила
+            .trainer-tooltip__person-post Персональный тренер, действующий спортсмен
+        .trainer-tooltip__schedule 
+          .trainer-tooltip__schedule-title Стоимость занятий включая вход в зал:
+          .trainer-tooltip__schedule-list
+            .trainer-tooltip__schedule-line 
+              .trainer-tooltip__schedule-title групповая тренировка
+              .trainer-tooltip__schedule-price 800₽
+            .trainer-tooltip__schedule-line 
+              .trainer-tooltip__schedule-title абонементы на 10 тренировок
+              .trainer-tooltip__schedule-price 5 000₽
+            .trainer-tooltip__schedule-line 
+              .trainer-tooltip__schedule-title персональная тренировка
+              .trainer-tooltip__schedule-price 2 000₽
+            .trainer-tooltip__schedule-line 
+              .trainer-tooltip__schedule-title персональная тренировка на двоих
+              .trainer-tooltip__schedule-price 2 000₽
+        .trainer-tooltip__bottom 
+          a(href="#").btn.btn_gradient.btn_wide
+            span +7 (911) 741-72-28
+          button(type="button").btn-icon
+            +svg(24, 24, 'tg')
+          button(type="button").btn-icon
+            +svg(24, 24, 'vk')
+

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Цены</title>
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
   </head>
   <body> 
     <header class="header"> 
@@ -103,299 +104,1947 @@
           <div class="heading">
             <h1 class="h1">Цены</h1>
           </div>
-          <div class="pricelist__inner">
+          <div class="pricelist__inner" data-tabs data-id="pr">
             <div class="pricelist__nav"> 
-              <div class="pricelist__nav-item">
-                <input type="radio" id="id_pr_nav_01" name="pr_nav" checked>
-                <label for="id_pr_nav_01">Веревочный парк</label>
-              </div>
-              <div class="pricelist__nav-item">
-                <input type="radio" id="id_pr_nav_02" name="pr_nav">
-                <label for="id_pr_nav_02">Скалодром</label>
-              </div>
-              <div class="pricelist__nav-item">
-                <input type="radio" id="id_pr_nav_03" name="pr_nav">
-                <label for="id_pr_nav_03">Проведение праздников</label>
-              </div>
-              <div class="pricelist__nav-item">
-                <input type="radio" id="id_pr_nav_04" name="pr_nav">
-                <label for="id_pr_nav_04">Секции</label>
-              </div>
+              <button class="pricelist__nav-item is-selected" type="button" data-tabs-control="pricelist-park" data-id="pr">Веревочный парк</button>
+              <button class="pricelist__nav-item" type="button" data-tabs-control="pricelist-wall" data-id="pr">Скалодром</button>
+              <button class="pricelist__nav-item" type="button" data-tabs-control="pricelist-events" data-id="pr">Проведение праздников</button>
+              <button class="pricelist__nav-item" type="button" data-tabs-control="pricelist-sport-sections" data-id="pr">Секции</button>
             </div>
-            <div class="pricelist__content" data-tabs> 
-              <div class="pricelist__section">
-                <div class="pricelist__section-nav"> 
-                  <button class="pricelist__section-tab-btn is-active" type="button" data-tab="tickets">Билеты</button>
-                  <button class="pricelist__section-tab-btn" type="button" data-tab="more-services">Доп. услуги</button>
-                </div>
-                <div class="pricelist__section-blocks">
-                  <div class="pricelist__section-block is-active" data-tab-content="tickets"> 
-                    <div class="pricelist__table"> 
-                      <div class="table"> 
-                        <div class="table__head"> 
-                          <div class="table__head-cell">
-                            <div class="table__head-title table__head-title--white">направление</div>
+            <div class="pricelist__content">
+              <div class="pricelist__section is-selected" data-tabs-panel="pricelist-park" data-id="pr">
+                <div class="pricelist__section-inner" data-tabs data-id="pr-park">
+                  <div class="pricelist__section-nav"> 
+                    <button class="pricelist__section-tab-btn is-selected" type="button" data-tabs-control="tickets" data-id="pr-park">Билеты</button>
+                    <button class="pricelist__section-tab-btn" type="button" data-tabs-control="more-services" data-id="pr-park">Доп. услуги</button>
+                  </div>
+                  <div class="pricelist__section-blocks">
+                    <div class="pricelist__section-block is-selected" data-tabs-panel="tickets" data-id="pr-park"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-table"> 
+                          <div class="table"> 
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">направление</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">инфо</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">длительность</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">кол-во чел.</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">в будни</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">в выходные</div>
+                              </div>
+                              <div class="table__head-cell"></div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Все приключения Turbo</div>
+                                    <div class="table__info-desc">Рост от 120 см.</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">Верёвочный парк все уровни, прыжок с крыла настоящего самолёта (∞), интерактивный скалодром, активити зона</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>Весь день</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc">1</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>3 880₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>4 380₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Все приключения</div>
+                                    <div class="table__info-desc">Рост от 120 см.</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">Верёвочный парк все уровни, прыжок с крыла настоящего самолёта (1), интерактивный скалодром, активити зона</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>3 часа</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc">1</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>2 580₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>3 280₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Юный верхолаз</div>
+                                    <div class="table__info-desc">Рост до 140 см.</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">2 трассы нижнего уровня, активити зона</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>2 часа</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc">1</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>1 580₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>2 180₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-sticker">акция</div>
+                                    <div class="table__info-title">Семейное трио</div>
+                                    <div class="table__info-desc">Рост от 180 см.</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">Верёвочный парк все уровни, прыжок с крыла настоящего самолёта (3), интерактивный скалодром, активити зона</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>3 часа</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc">1</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>5 780₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>7 680₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">4 визита в верёвочный парк (абонемент)</div>
+                                    <div class="table__info-desc">Срок действия 6 месяцев</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>4 посещения</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc">1</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>7 280₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>7 280₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="table__head-cell">
-                            <div class="table__head-title">инфо</div>
-                          </div>
-                          <div class="table__head-cell">
-                            <div class="table__head-title">длительность</div>
-                          </div>
-                          <div class="table__head-cell">
-                            <div class="table__head-title">кол-во чел.</div>
-                          </div>
-                          <div class="table__head-cell">
-                            <div class="table__head-title">в будни</div>
-                          </div>
-                          <div class="table__head-cell">
-                            <div class="table__head-title">в выходные</div>
-                          </div>
-                          <div class="table__head-cell"></div>
                         </div>
-                        <div class="table__body"> 
-                          <div class="table__row"> 
-                            <div class="table__cell">
-                              <div class="table__info">
-                                <div class="table__info-title">Все приключения Turbo</div>
-                                <div class="table__info-desc">Рост от 120 см.</div>
+                      </div>
+                    </div>
+                    <div class="pricelist__section-block" data-tabs-panel="more-services" data-id="pr-park"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--lg">
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">направление</div>
                               </div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__text">Верёвочный парк все уровни, прыжок с крыла настоящего самолёта (∞), интерактивный скалодром, активити зона</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>Весь день</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc">1</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>3 880₽</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>4 380₽</b></div>
-                            </div>
-                            <div class="table__cell"> 
-                              <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
-                                <svg width="22" height="22"> 
-                                  <use xlink:href="./img/sprite.svg#tickets"></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="table__row"> 
-                            <div class="table__cell">
-                              <div class="table__info">
-                                <div class="table__info-title">Все приключения</div>
-                                <div class="table__info-desc">Рост от 120 см.</div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">инфо</div>
                               </div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__text">Верёвочный парк все уровни, прыжок с крыла настоящего самолёта (1), интерактивный скалодром, активити зона</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>3 часа</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc">1</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>2 580₽</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>3 280₽</b></div>
-                            </div>
-                            <div class="table__cell"> 
-                              <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
-                                <svg width="22" height="22"> 
-                                  <use xlink:href="./img/sprite.svg#tickets"></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="table__row"> 
-                            <div class="table__cell">
-                              <div class="table__info">
-                                <div class="table__info-title">Юный верхолаз</div>
-                                <div class="table__info-desc">Рост до 140 см.</div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">в будни</div>
                               </div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__text">2 трассы нижнего уровня, активити зона</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>2 часа</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc">1</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>1 580₽</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>2 180₽</b></div>
-                            </div>
-                            <div class="table__cell"> 
-                              <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
-                                <svg width="22" height="22"> 
-                                  <use xlink:href="./img/sprite.svg#tickets"></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="table__row"> 
-                            <div class="table__cell">
-                              <div class="table__info">
-                                <div class="table__info-sticker">акция</div>
-                                <div class="table__info-title">Семейное трио</div>
-                                <div class="table__info-desc">Рост от 180 см.</div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">в выходные</div>
                               </div>
+                              <div class="table__head-cell"></div>
                             </div>
-                            <div class="table__cell">
-                              <div class="table__text">Верёвочный парк все уровни, прыжок с крыла настоящего самолёта (3), интерактивный скалодром, активити зона</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>3 часа</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc">1</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>5 780₽</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>7 680₽</b></div>
-                            </div>
-                            <div class="table__cell"> 
-                              <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
-                                <svg width="22" height="22"> 
-                                  <use xlink:href="./img/sprite.svg#tickets"></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="table__row"> 
-                            <div class="table__cell">
-                              <div class="table__info">
-                                <div class="table__info-title">4 визита в верёвочный парк (абонемент)</div>
-                                <div class="table__info-desc">Срок действия 6 месяцев</div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Персональный инструктор</div>
+                                    <div class="table__info-desc">1 час, до 3х человек</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">Ваш личный наставник в приключениях </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>1 980₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>2 380₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                            <div class="table__cell"></div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>4 посещения</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc">1</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>7 280₽</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>7 280₽</b></div>
-                            </div>
-                            <div class="table__cell"> 
-                              <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
-                                <svg width="22" height="22"> 
-                                  <use xlink:href="./img/sprite.svg#tickets"></use>
-                                </svg>
-                              </button>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Семейная раздевалка</div>
+                                    <div class="table__info-desc">4 часа, до 8 чел</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">Отдельная раздевалка с душем и сауной только для вашей компании</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>3 000₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>3 000₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Аренда кают-компании</div>
+                                    <div class="table__info-desc">1 час</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">Комната для чаепития</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>2 500₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>3 000₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="pricelist__section-block" data-tab-content="more-services"> 
-                    <div class="pricelist__table"> 
-                      <div class="table table--more-services"> 
-                        <div class="table__head"> 
-                          <div class="table__head-cell">
-                            <div class="table__head-title table__head-title--white">направление</div>
+                </div>
+              </div>
+              <div class="pricelist__section" data-tabs-panel="pricelist-wall" data-id="pr">
+                <div class="pricelist__section-inner" data-tabs data-id="pr-wall">
+                  <div class="pricelist__section-nav"> 
+                    <button class="pricelist__section-tab-btn is-selected" type="button" data-tabs-control="training" data-id="pr-wall">Занятие с тренером</button>
+                    <button class="pricelist__section-tab-btn" type="button" data-tabs-control="visiting" data-id="pr-wall">Посещение</button>
+                    <button class="pricelist__section-tab-btn" type="button" data-tabs-control="rental" data-id="pr-wall">Прокат</button>
+                  </div>
+                  <div class="pricelist__section-blocks">
+                    <div class="pricelist__section-block is-selected" data-tabs-panel="training" data-id="pr-wall"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-table"> 
+                          <div class="table"> 
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">направление</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">кол-во посещений</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">срок действия (для абонементов)</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">взрослые</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">дети от 4 до 14 лет,<br> мастера спорта</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">14-18 лет, студенты,<br> пенсионеры</div>
+                              </div>
+                              <div class="table__head-cell"></div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Вводное занятие</div>
+                                    <div class="table__info-desc">Вход до 16-00, будние дни</div>
+                                    <div class="table__info-special">ДЛЯ НОВИЧКОВ от 8 лет!</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc">1</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>Включено</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>1 800₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>1 800₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>1 800₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="table__head-cell">
-                            <div class="table__head-title">инфо</div>
-                          </div>
-                          <div class="table__head-cell">
-                            <div class="table__head-title">в будни</div>
-                          </div>
-                          <div class="table__head-cell">
-                            <div class="table__head-title">в выходные</div>
-                          </div>
-                          <div class="table__head-cell"></div>
                         </div>
-                        <div class="table__body"> 
-                          <div class="table__row"> 
-                            <div class="table__cell">
-                              <div class="table__info">
-                                <div class="table__info-title">Персональный инструктор</div>
-                                <div class="table__info-desc">1 час, до 3х человек</div>
+                      </div>
+                    </div>
+                    <div class="pricelist__section-block" data-tabs-panel="visiting" data-id="pr-wall"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-table"> 
+                          <div class="table"> 
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">направление</div>
                               </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">кол-во посещений</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">срок действия (для абонементов)</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">взрослые</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">дети от 4 до 14 лет,<br> мастера спорта</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">14-18 лет, студенты,<br> пенсионеры</div>
+                              </div>
+                              <div class="table__head-cell"></div>
                             </div>
-                            <div class="table__cell">
-                              <div class="table__text">Ваш личный наставник в приключениях </div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>1 980₽</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>2 380₽</b></div>
-                            </div>
-                            <div class="table__cell"> 
-                              <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
-                                <svg width="22" height="22"> 
-                                  <use xlink:href="./img/sprite.svg#tickets"></use>
-                                </svg>
-                              </button>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Разовое посещение</div>
+                                    <div class="table__info-desc">Вход до 16-00, будние дни</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc">1</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>1 день</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>700₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>600₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>600₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div class="table__row"> 
-                            <div class="table__cell">
-                              <div class="table__info">
-                                <div class="table__info-title">Семейная раздевалка</div>
-                                <div class="table__info-desc">4 часа, до 8 чел</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pricelist__section-block" data-tabs-panel="rental" data-id="pr-wall"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--xs">
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">наименование</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">цена</div>
                               </div>
                             </div>
-                            <div class="table__cell">
-                              <div class="table__text">Отдельная раздевалка с душем и сауной только для вашей компании</div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>3 000₽</b></div>
-                            </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>3 000₽</b></div>
-                            </div>
-                            <div class="table__cell"> 
-                              <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
-                                <svg width="22" height="22"> 
-                                  <use xlink:href="./img/sprite.svg#tickets"></use>
-                                </svg>
-                              </button>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Аренда шкафчика в раздевалке</div>
+                                    <div class="table__info-desc">1 месяц</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>500₽</b></div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div class="table__row"> 
-                            <div class="table__cell">
-                              <div class="table__info">
-                                <div class="table__info-title">Аренда кают-компании</div>
-                                <div class="table__info-desc">1 час</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pricelist__section" data-tabs-panel="pricelist-events" data-id="pr">
+                <div class="pricelist__section-inner" data-tabs data-id="pr-events">
+                  <div class="pricelist__section-nav"> 
+                    <button class="pricelist__section-tab-btn is-selected" type="button" data-tabs-control="pr-ev-hb" data-id="pr-events">Занятие с тренером</button>
+                    <button class="pricelist__section-tab-btn" type="button" data-tabs-control="pr-ev-graduation" data-id="pr-events">Посещение</button>
+                    <button class="pricelist__section-tab-btn" type="button" data-tabs-control="pr-ev-more-services" data-id="pr-events">Прокат</button>
+                  </div>
+                  <div class="pricelist__section-blocks">
+                    <div class="pricelist__section-block is-selected" data-tabs-panel="pr-ev-hb" data-id="pr-events"> 
+                      <div class="pricelist__section-item"> 
+                        <div class="pricelist__section-title">День рождения в верёвочном парке</div>
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--xl"> 
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">направление</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">инфо</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">1-5 гостей</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">6-10 гостей</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">11-15 гостей</div>
+                              </div>
+                              <div class="table__head-cell"></div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Пакет «Все приключения» (будни)</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">анимация 1 час + <br> все приключения 2 часа + <br> кают-компания 4 часа</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>21 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>27 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>40 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
                               </div>
                             </div>
-                            <div class="table__cell">
-                              <div class="table__text">Комната для чаепития</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pricelist__section-item"> 
+                        <div class="pricelist__section-title">День рождения на скалодроме</div>
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--md"> 
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">кол-во человек</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">будни</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">выходные</div>
+                              </div>
+                              <div class="table__head-cell"></div>
                             </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>2 500₽</b></div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">1-5</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>10 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>13 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                            <div class="table__cell">
-                              <div class="table__desc"> <b>3 000₽</b></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pricelist__section-block" data-tabs-panel="pr-ev-graduation" data-id="pr-events"> 
+                      <div class="pricelist__section-item"> 
+                        <div class="pricelist__section-title">Выпускной в верёвочном парке</div>
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--xl"> 
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">направление</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">инфо</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">1-5 гостей</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">6-10 гостей</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">11-15 гостей</div>
+                              </div>
+                              <div class="table__head-cell"></div>
                             </div>
-                            <div class="table__cell"> 
-                              <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
-                                <svg width="22" height="22"> 
-                                  <use xlink:href="./img/sprite.svg#tickets"></use>
-                                </svg>
-                              </button>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Пакет «Все приключения» (будни)</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">анимация 1 час + <br> все приключения 2 часа + <br> кают-компания 4 часа</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>21 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>27 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>40 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pricelist__section-item"> 
+                        <div class="pricelist__section-title">Выпускной на скалодроме</div>
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--md"> 
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">кол-во человек</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">будни</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">выходные</div>
+                              </div>
+                              <div class="table__head-cell"></div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">1-5</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>10 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>13 800 ₽</b></div>
+                                </div>
+                                <div class="table__cell"> 
+                                  <button class="btn-icon btn-icon_m btn-icon_gradient" type="button"> 
+                                    <svg width="22" height="22"> 
+                                      <use xlink:href="./img/sprite.svg#tickets"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pricelist__section-block" data-tabs-panel="pr-ev-more-services" data-id="pr-events"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--sm">
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">товар/услуга</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">инфо</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">стоимость</div>
+                              </div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Браслет силиконовый</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>100 ₽</b></div>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Браслет светоотражающий</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>100 ₽</b></div>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Гелиевые шары</div>
+                                    <div class="table__info-desc">20 штук</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>100 ₽</b></div>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Пакет украшений (для компании до 20 персон)</div>
+                                    <div class="table__info-desc">Будние дни после 16-00, выходные/праздники</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__text">Гелиевые шары, одноразовая посуда, салфетки, скатерти, гирлянды и свечи для создания праздничного настроения</div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>100 ₽</b></div>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info">
+                                    <div class="table__info-title">Работа фотографа</div>
+                                    <div class="table__info-desc">1 час</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"> <b>100 ₽</b></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pricelist__section-bottom"><a class="btn btn_gradient" href="#">Заказать праздник!</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pricelist__section" data-tabs-panel="pricelist-sport-sections" data-id="pr">
+                <div class="pricelist__section-inner" data-tabs data-id="pr-sport">
+                  <div class="pricelist__section-nav"> 
+                    <button class="pricelist__section-tab-btn is-selected" type="button" data-tabs-control="pr-sp-adult" data-id="pr-sport">Скалолазание для взрослых</button>
+                    <button class="pricelist__section-tab-btn" type="button" data-tabs-control="pr-sp-kids" data-id="pr-sport">Скалолазание для детей</button>
+                    <button class="pricelist__section-tab-btn" type="button" data-tabs-control="pr-sp-other" data-id="pr-sport">Другие секции</button>
+                  </div>
+                  <div class="pricelist__section-blocks">
+                    <div class="pricelist__section-block is-selected" data-tabs-panel="pr-sp-adult" data-id="pr-sport"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--week">
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">товар/услуга</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">пн</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">вт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">ср</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">чт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">пт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">сб</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">вс</div>
+                              </div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 4-5 лет</div>
+                                    <div class="table__info-desc">Скалолазание. Включён вход в зал и аренда обвязки</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 4-5 лет</div>
+                                    <div class="table__info-desc">Скалолазание. Включён вход в зал и аренда обвязки</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 6-8 лет</div>
+                                    <div class="table__info-desc">Скалолазание</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pricelist__section-block" data-tabs-panel="pr-sp-kids" data-id="pr-sport"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-title">Спортшкола скалолазания</div>
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--week">
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">товар/услуга</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">пн</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">вт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">ср</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">чт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">пт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">сб</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">вс</div>
+                              </div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 4-5 лет</div>
+                                    <div class="table__info-desc">Скалолазание. Включён вход в зал и аренда обвязки</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 4-5 лет</div>
+                                    <div class="table__info-desc">Скалолазание. Включён вход в зал и аренда обвязки</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 6-8 лет</div>
+                                    <div class="table__info-desc">Скалолазание</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-title">Академия Чемпион</div>
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--week">
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">товар/услуга</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">пн</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">вт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">ср</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">чт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">пт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">сб</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">вс</div>
+                              </div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 4-5 лет</div>
+                                    <div class="table__info-desc">Скалолазание. Включён вход в зал и аренда обвязки</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 4-5 лет</div>
+                                    <div class="table__info-desc">Скалолазание. Включён вход в зал и аренда обвязки</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Дети 4-5 лет</div>
+                                    <div class="table__info-desc">Скалолазание. Включён вход в зал и аренда обвязки</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pricelist__section-block" data-tabs-panel="pr-sp-other" data-id="pr-sport"> 
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--week">
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">товар/услуга</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">пн</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">вт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">ср</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">чт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">пт</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">сб</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">вс</div>
+                              </div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Yukando</div>
+                                    <div class="table__info-desc">Паркур. Дети 7-9 лет</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell"></div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="schedule-card">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Художественная гимнастика «Орион»</div>
+                                    <div class="table__info-desc">Скалолазание. Включён вход в зал и аренда обвязки</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell"></div>
+                              </div>
+                              <div class="table__row"> 
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell">
+                                  <div class="schedule-card schedule-card_secondary">
+                                    <button class="schedule-card__info" type="button" data-tippy-content> 
+                                      <svg width="24" height="24"> 
+                                        <use xlink:href="./img/sprite.svg#info-in-circle"></use>
+                                      </svg>
+                                    </button>
+                                    <div class="schedule-card__inner">
+                                      <div class="schedule-card__top"> 
+                                        <div class="schedule-card__time">18:00-19:30</div>
+                                        <div class="schedule-card__teacher">Гринев Виктор</div>
+                                      </div>
+                                      <div class="schedule-card__bottom">7-9 лет</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="table__cell"></div>
+                                <div class="table__cell"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pricelist__section-item">
+                        <div class="pricelist__section-title">Стоимость входа в зал для посетителей не скалолазных секций</div>
+                        <div class="pricelist__section-table"> 
+                          <div class="table table--sm">
+                            <div class="table__head"> 
+                              <div class="table__head-cell">
+                                <div class="table__head-title table__head-title--white">кол-во человек</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">будни до 16:00</div>
+                              </div>
+                              <div class="table__head-cell">
+                                <div class="table__head-title">будни после 16:00, выходные праздники</div>
+                              </div>
+                            </div>
+                            <div class="table__body"> 
+                              <div class="table__row"> 
+                                <div class="table__cell">
+                                  <div class="table__info"> 
+                                    <div class="table__info-title">Вход для посетителей секции</div>
+                                  </div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"><b>270 ₽</b></div>
+                                </div>
+                                <div class="table__cell">
+                                  <div class="table__desc"><b>270 ₽</b></div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -493,6 +2142,8 @@
       </svg></a>
     <script src="js/libs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

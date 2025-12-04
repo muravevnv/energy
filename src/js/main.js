@@ -370,14 +370,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initAccordion();
 
-  function initTabs(container) {
+  function initTabs(container, isNested = false) {
+    // Находим табы только внутри текущего контейнера
     const buttons = container.querySelectorAll("[data-tab]");
     const panels = container.querySelectorAll("[data-tab-content]");
 
+    // Функция для переключения табов
     function switchTab(tabId) {
-      // Деактивируем все
+      // Деактивируем все табы в текущем контейнере
       buttons.forEach((btn) => btn.classList.remove("is-active"));
-      panels.forEach((panel) => panel.classList.remove("is-active"));
+      panels.forEach((panel) => {
+        panel.classList.remove("is-active");
+        // Скрываем все дочерние табы при переключении основного таба
+        const childTabs = panel.querySelectorAll("[data-tabs]");
+        childTabs.forEach((childContainer) => {
+          const childInstance = childContainer._tabInstance;
+          if (childInstance) {
+            childInstance.deactivateAll();
+          }
+        });
+      });
 
       // Активируем выбранные
       const activeButton = container.querySelector(`[data-tab="${tabId}"]`);
@@ -389,6 +401,23 @@ document.addEventListener("DOMContentLoaded", function () {
       if (activePanel) activePanel.classList.add("is-active");
     }
 
+    // Деактивация всех табов (для вложенных)
+    function deactivateAll() {
+      buttons.forEach((btn) => btn.classList.remove("is-active"));
+      panels.forEach((panel) => panel.classList.remove("is-active"));
+
+      // Рекурсивно деактивируем вложенные табы
+      panels.forEach((panel) => {
+        const childTabs = panel.querySelectorAll("[data-tabs]");
+        childTabs.forEach((childContainer) => {
+          const childInstance = childContainer._tabInstance;
+          if (childInstance) {
+            childInstance.deactivateAll();
+          }
+        });
+      });
+    }
+
     // Обработчики событий
     buttons.forEach((button) => {
       button.addEventListener("click", (e) => {
@@ -398,30 +427,148 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Активируем первый таб
-    if (buttons.length > 0) {
+    // Автоматическая активация первого таба только для корневых контейнеров
+    if (buttons.length > 0 && !isNested) {
       const firstTabId = buttons[0].getAttribute("data-tab");
       switchTab(firstTabId);
     }
 
     // Возвращаем методы для внешнего использования
-    return {
+    const api = {
       switchTab,
       getActiveTab: () => {
         const activeButton = container.querySelector("[data-tab].is-active");
         return activeButton ? activeButton.getAttribute("data-tab") : null;
       },
+      deactivateAll,
     };
+
+    // Сохраняем инстанс в элементе контейнера для доступа
+    container._tabInstance = api;
+
+    return api;
   }
 
-  const tabContainers = document.querySelectorAll("[data-tabs]");
-  if (tabContainers.length > 0) {
-    const tabInstances = [];
+  // Основная инициализация
+  function initTabs(container, isNested = false) {
+    // Находим табы только внутри текущего контейнера
+    const buttons = container.querySelectorAll("[data-tab]");
+    const panels = container.querySelectorAll("[data-tab-content]");
 
-    tabContainers.forEach((container) => {
-      tabInstances.push(initTabs(container));
+    // Функция для переключения табов
+    function switchTab(tabId, isFromClick = false) {
+      // Деактивируем все табы в текущем контейнере
+      buttons.forEach((btn) => btn.classList.remove("is-active"));
+      panels.forEach((panel) => {
+        panel.classList.remove("is-active");
+        // Деактивируем дочерние табы только при переключении основного таба
+        // (не при клике на вложенный таб)
+        if (!isFromClick || panel.getAttribute("data-tab-content") === tabId) {
+          const childTabs = panel.querySelectorAll("[data-tabs]");
+          childTabs.forEach((childContainer) => {
+            const childInstance = childContainer._tabInstance;
+            if (childInstance) {
+              childInstance.deactivateAll();
+            }
+          });
+        }
+      });
+
+      // Активируем выбранные
+      const activeButton = container.querySelector(`[data-tab="${tabId}"]`);
+      const activePanel = container.querySelector(
+        `[data-tab-content="${tabId}"]`
+      );
+
+      if (activeButton) activeButton.classList.add("is-active");
+      if (activePanel) activePanel.classList.add("is-active");
+    }
+
+    // Деактивация всех табов (для вложенных)
+    function deactivateAll() {
+      buttons.forEach((btn) => btn.classList.remove("is-active"));
+      panels.forEach((panel) => panel.classList.remove("is-active"));
+    }
+
+    // Обработчики событий
+    buttons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation(); // Останавливаем всплытие события
+        const tabId = button.getAttribute("data-tab");
+        switchTab(tabId, true);
+      });
     });
+
+    // Автоматическая активация первого таба только для корневых контейнеров
+    if (buttons.length > 0 && !isNested) {
+      const firstTabId = buttons[0].getAttribute("data-tab");
+      switchTab(firstTabId);
+    }
+
+    // Возвращаем методы для внешнего использования
+    const api = {
+      switchTab,
+      getActiveTab: () => {
+        const activeButton = container.querySelector("[data-tab].is-active");
+        return activeButton ? activeButton.getAttribute("data-tab") : null;
+      },
+      deactivateAll,
+    };
+
+    // Сохраняем инстанс в элементе контейнера для доступа
+    container._tabInstance = api;
+
+    return api;
   }
+
+  class Tabs {
+    constructor(selector = "[data-tabs]") {
+      this.elements = document.querySelectorAll(selector);
+
+      if (this.elements.length) {
+        this.elements.forEach((el) => {
+          const uniqueId = el.dataset.id || "";
+          let panelsSelector = "[data-tabs-panel]";
+          let controlsSelector = "[data-tabs-control]";
+          if (uniqueId) {
+            panelsSelector += `[data-id="${uniqueId}"]`;
+            controlsSelector += `[data-id="${uniqueId}"]`;
+          }
+
+          const panels = el.querySelectorAll(panelsSelector);
+          const controls = el.querySelectorAll(controlsSelector);
+
+          controls.forEach((control) => {
+            control.addEventListener("click", (e) => {
+              e.preventDefault();
+              const target = e.target.closest(controlsSelector);
+              this.update(target, controls, panels);
+            });
+          });
+        });
+      }
+    }
+    update(target, controls, panels) {
+      if (!target.classList.contains("is-selected")) {
+        const id = target.dataset.tabsControl;
+        console.log(id);
+        controls.forEach((control) => {
+          control.classList.remove("is-selected");
+        });
+        target.classList.add("is-selected");
+        panels.forEach((panel) => {
+          if (panel.dataset.tabsPanel === id) {
+            panel.classList.add("is-selected");
+          } else {
+            panel.classList.remove("is-selected");
+          }
+        });
+      }
+    }
+  }
+
+  new Tabs();
 
   function initVideoPlayer() {
     const videoBlocks = document.querySelectorAll("[data-video]");
@@ -520,4 +667,86 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   };
+  // main.js - минимальная версия
+  console.log("Window loaded, checking Tippy...");
+
+  if (typeof tippy === "undefined") {
+    console.error("Tippy.js не найден! Проверьте:");
+    console.log("1. Порядок загрузки скриптов");
+    console.log("2. Блокировку рекламными блокировщиками");
+    console.log("3. Ошибки в консоли (F12)");
+    return;
+  }
+
+  // Простая инициализация без сложной логики
+  $("[data-tippy-content]").each(function () {
+    const content = `
+      <div class="trainer-tooltip">
+      <div class="trainer-tooltip__inner">
+            <button class="trainer-tooltip__close" type="button"></button>
+            <div class="trainer-tooltip__person"> 
+              <picture class="trainer-tooltip__person-img"> <img src="./img/trainer/img.png" alt=""></picture>
+              <div class="trainer-tooltip__person-info"> 
+                <div class="trainer-tooltip__person-name">Пименова Людмила</div>
+                <div class="trainer-tooltip__person-post">Персональный тренер, действующий спортсмен</div>
+              </div>
+            </div>
+            <div class="trainer-tooltip__schedule"> 
+              <div class="trainer-tooltip__schedule-subtitle">Стоимость занятий включая вход в зал:</div>
+              <div class="trainer-tooltip__schedule-list">
+                <div class="trainer-tooltip__schedule-line"> 
+                  <div class="trainer-tooltip__schedule-title">групповая тренировка</div>
+                  <div class="trainer-tooltip__schedule-price">800₽</div>
+                </div>
+                <div class="trainer-tooltip__schedule-line"> 
+                  <div class="trainer-tooltip__schedule-title">абонементы на 10 тренировок</div>
+                  <div class="trainer-tooltip__schedule-price">5 000₽</div>
+                </div>
+                <div class="trainer-tooltip__schedule-line"> 
+                  <div class="trainer-tooltip__schedule-title">персональная тренировка</div>
+                  <div class="trainer-tooltip__schedule-price">2 000₽</div>
+                </div>
+                <div class="trainer-tooltip__schedule-line"> 
+                  <div class="trainer-tooltip__schedule-title">персональная тренировка на двоих</div>
+                  <div class="trainer-tooltip__schedule-price">2 000₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="trainer-tooltip__bottom"> <a class="btn btn_gradient btn_wide" href="#"><span>+7 (911) 741-72-28</span></a>
+              <button class="btn-icon btn-icon_m btn-icon_grey" type="button">
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#tg"></use>
+                </svg>
+              </button>
+              <button class="btn-icon btn-icon_m btn-icon_grey" type="button">
+                <svg width="24" height="24"> 
+                  <use xlink:href="./img/sprite.svg#vk"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>`;
+
+    console.log(content);
+
+    tippy(this, {
+      content: content,
+      trigger: "click", // Или 'mouseenter focus'
+      placement: "top",
+      allowHTML: true,
+      arrow: false,
+      offset: [0, 0],
+      flip: false,
+      popperOptions: {
+        modifiers: [
+          {
+            name: "flip",
+            enabled: false,
+          },
+        ],
+      },
+    });
+  });
+
+  console.log("Tippy инициализирован");
 });

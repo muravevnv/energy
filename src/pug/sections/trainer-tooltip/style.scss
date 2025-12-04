@@ -1,0 +1,144 @@
+[data-tippy-root] {
+  pointer-events: all !important;
+  z-index: 10 !important;
+
+  .tippy-box {
+    max-width: unset !important;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .tippy-content {
+    padding: 0;
+    top: 200px;
+  }
+}
+
+.trainer-tooltip {
+  padding: 24px;
+  width: 440px;
+  background-color: var(--color-white);
+  color: var(--color-blck);
+  border-radius: var(--rounded-xl);
+  box-shadow: 0px 4px 20px 0px #D6D5D54D;
+
+  @include mq($m) {
+    width: 300px;
+    padding: 16px;
+  }
+
+  &__person {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-blck-50);
+
+    &-img {
+      display: block;
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+      border-radius: var(--rounded-full);
+
+      @include mq($m) {
+        width: 48px;
+        height: 48px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-name {
+      font-size: 18px;
+      line-height: 1.56;
+      font-family: var(--font-secondary);
+      margin-bottom: 4px;
+
+      @include mq($m) {
+        font-size: 16px;
+      }
+    }
+
+    &-post {
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--color-blck-400)
+    }
+  }
+
+  &__schedule {
+    padding-bottom: 16px;
+
+    &-subtitle {
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--color-blck-500);
+      margin-bottom: 15px;
+    }
+
+    &-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+
+    &-title {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.3;
+      color: var(--color-blck-400);
+
+      &::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: currentColor;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: 6px;
+      }
+    }
+
+    &-price {
+      font-size: 18px;
+      line-height: 1.56;
+      font-weight: 700;
+
+      @include mq($m) {
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+
+    @include mq($m) {
+      flex-wrap: wrap;
+
+      .btn {
+        order: 10;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.pricelist__section(data-tabs-panel="pricelist-wall" data-id="pr")
+  .pricelist__section-inner(data-tabs data-id="pr-wall")
+    .pricelist__section-nav 
+      button(type="button" data-tabs-control="training" data-id="pr-wall").pricelist__section-tab-btn.is-selected Занятие с тренером
+      button(type="button" data-tabs-control="visiting" data-id="pr-wall").pricelist__section-tab-btn Посещение
+      button(type="button" data-tabs-control="rental" data-id="pr-wall").pricelist__section-tab-btn Прокат
+    .pricelist__section-blocks
+      .pricelist__section-block.is-selected(data-tabs-panel="training" data-id="pr-wall") 
+        .pricelist__section-item
+          .pricelist__section-table 
+            .table 
+              .table__head 
+                .table__head-cell
+                  .table__head-title.table__head-title--white направление
+                .table__head-cell
+                  .table__head-title кол-во посещений
+                .table__head-cell
+                  .table__head-title срок действия (для абонементов)
+                .table__head-cell
+                  .table__head-title взрослые
+                .table__head-cell
+                  .table__head-title дети от 4 до 14 лет,<br> мастера спорта
+                .table__head-cell
+                  .table__head-title 14-18 лет, студенты,<br> пенсионеры
+                .table__head-cell
+              .table__body 
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Вводное занятие
+                      .table__info-desc Вход до 16-00, будние дни
+                      .table__info-special ДЛЯ НОВИЧКОВ от 8 лет!
+                  .table__cell
+                    .table__desc 1
+                  .table__cell
+                    .table__desc 
+                      b Включено
+                  .table__cell
+                    .table__desc 
+                      b 1 800₽
+                  .table__cell
+                    .table__desc 
+                      b 1 800₽
+                  .table__cell
+                    .table__desc 
+                      b 1 800₽
+                  .table__cell 
+                    button(type="button").btn-icon.btn-icon_m.btn-icon_gradient 
+                      +svg(22, 22, 'tickets')
+      .pricelist__section-block(data-tabs-panel="visiting" data-id="pr-wall") 
+        .pricelist__section-item
+          .pricelist__section-table 
+            .table 
+              .table__head 
+                .table__head-cell
+                  .table__head-title.table__head-title--white направление
+                .table__head-cell
+                  .table__head-title кол-во посещений
+                .table__head-cell
+                  .table__head-title срок действия (для абонементов)
+                .table__head-cell
+                  .table__head-title взрослые
+                .table__head-cell
+                  .table__head-title дети от 4 до 14 лет,<br> мастера спорта
+                .table__head-cell
+                  .table__head-title 14-18 лет, студенты,<br> пенсионеры
+                .table__head-cell
+              .table__body 
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Разовое посещение
+                      .table__info-desc Вход до 16-00, будние дни
+                  .table__cell
+                    .table__desc 1
+                  .table__cell
+                    .table__desc 
+                      b 1 день
+                  .table__cell
+                    .table__desc 
+                      b 700₽
+                  .table__cell
+                    .table__desc 
+                      b 600₽
+                  .table__cell
+                    .table__desc 
+                      b 600₽
+                  .table__cell 
+                    button(type="button").btn-icon.btn-icon_m.btn-icon_gradient 
+                      +svg(22, 22, 'tickets')
+      .pricelist__section-block(data-tabs-panel="rental" data-id="pr-wall") 
+        .pricelist__section-item
+          .pricelist__section-table 
+            .table.table--xs
+              .table__head 
+                .table__head-cell
+                  .table__head-title.table__head-title--white наименование
+                .table__head-cell
+                  .table__head-title цена
+              .table__body 
+                .table__row 
+                  .table__cell
+                    .table__info
+                      .table__info-title Аренда шкафчика в раздевалке
+                      .table__info-desc 1 месяц
+                  .table__cell
+                    .table__desc 
+                      b 500₽

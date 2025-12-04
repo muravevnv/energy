@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Спортивная школа скалолазания</title>
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
   </head>
   <body> 
     <header class="header"> 
@@ -215,11 +216,11 @@
                         <div class="swiper-wrapper"> 
                           <div class="swiper-slide"> 
                             <div class="schedule-card">
-                              <div class="schedule-card__info"> 
+                              <button class="schedule-card__info" type="button" data-tippy-content> 
                                 <svg width="24" height="24"> 
                                   <use xlink:href="./img/sprite.svg#info-in-circle"></use>
                                 </svg>
-                              </div>
+                              </button>
                               <div class="schedule-card__inner">
                                 <div class="schedule-card__top"> 
                                   <div class="schedule-card__time">18:00-19:30</div>
@@ -232,11 +233,11 @@
                           <div class="swiper-slide"> 
                             <div class="schedule-card">
                               <div class="schedule-card__inner">
-                                <div class="schedule-card__info"> 
+                                <button class="schedule-card__info" type="button" data-tippy-content> 
                                   <svg width="24" height="24"> 
                                     <use xlink:href="./img/sprite.svg#info-in-circle"></use>
                                   </svg>
-                                </div>
+                                </button>
                                 <div class="schedule-card__top"> 
                                   <div class="schedule-card__time">18:00-19:30</div>
                                   <div class="schedule-card__teacher">Гринев Виктор</div>
@@ -248,11 +249,11 @@
                           <div class="swiper-slide">
                             <div class="schedule-card">
                               <div class="schedule-card__inner">
-                                <div class="schedule-card__info"> 
+                                <button class="schedule-card__info" type="button" data-tippy-content> 
                                   <svg width="24" height="24"> 
                                     <use xlink:href="./img/sprite.svg#info-in-circle"></use>
                                   </svg>
-                                </div>
+                                </button>
                                 <div class="schedule-card__top"> 
                                   <div class="schedule-card__time">18:00-19:30</div>
                                   <div class="schedule-card__teacher">Гринев Виктор</div>
@@ -264,11 +265,11 @@
                           <div class="swiper-slide schedule-card_secondary"> 
                             <div class="schedule-card">
                               <div class="schedule-card__inner">
-                                <div class="schedule-card__info"> 
+                                <button class="schedule-card__info" type="button" data-tippy-content> 
                                   <svg width="24" height="24"> 
                                     <use xlink:href="./img/sprite.svg#info-in-circle"></use>
                                   </svg>
-                                </div>
+                                </button>
                                 <div class="schedule-card__top"> 
                                   <div class="schedule-card__time">18:00-19:30</div>
                                   <div class="schedule-card__teacher">Гринев Виктор</div>
@@ -280,11 +281,11 @@
                           <div class="swiper-slide"> 
                             <div class="schedule-card">
                               <div class="schedule-card__inner">
-                                <div class="schedule-card__info"> 
+                                <button class="schedule-card__info" type="button" data-tippy-content> 
                                   <svg width="24" height="24"> 
                                     <use xlink:href="./img/sprite.svg#info-in-circle"></use>
                                   </svg>
-                                </div>
+                                </button>
                                 <div class="schedule-card__top"> 
                                   <div class="schedule-card__time">18:00-19:30</div>
                                   <div class="schedule-card__teacher">Гринев Виктор</div>
@@ -927,6 +928,8 @@
       </svg></a>
     <script src="js/libs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

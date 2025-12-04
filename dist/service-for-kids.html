@@ -131,15 +131,15 @@
               </div>
             </div>
             <div class="service__inner">
-              <div class="service__content" data-tabs>
+              <div class="service__content" data-tabs data-id="sv-content">
                 <div class="sv-tabs"> 
                   <div class="sv-tabs__controls"> 
-                    <button class="sv-tabs__control is-active" type="button" data-tab="kids-event-01">На скалодроме</button>
-                    <button class="sv-tabs__control" type="button" data-tab="kids-event-02">В веревочном парке</button>
+                    <button class="sv-tabs__control is-selected" type="button" data-tabs-control="kids-event-01" data-id="sv-content">На скалодроме</button>
+                    <button class="sv-tabs__control" type="button" data-tabs-control="kids-event-02" data-id="sv-content">В веревочном парке</button>
                   </div>
                 </div>
                 <div class="sv-tabs-content">
-                  <div class="sv-tabs-content__block is-active" data-tab-content="kids-event-01"> 
+                  <div class="sv-tabs-content__block is-selected" data-tabs-panel="kids-event-01" data-id="sv-content"> 
                     <div class="sv-block"> 
                       <div class="sv-block__title">Детский праздник на скалодроме</div>
                       <div class="sv-block__content"> 
@@ -490,7 +490,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="sv-tabs-content__block" data-tab-content="kids-event-02">
+                  <div class="sv-tabs-content__block" data-tabs-panel="kids-event-02" data-id="sv-content">
                     <div class="sv-block"> 
                       <div class="sv-block__title">Детский праздник в верёвочном парке</div>
                       <div class="sv-block__content"> 
@@ -1373,6 +1373,8 @@
       </svg></a>
     <script src="js/libs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
